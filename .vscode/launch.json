@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "I2C-TEST",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/I2C-TEST.elf",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "debugServerArgs": "-f interface/stlink-v2-1.cfg -f target/stm32l0.cfg",
+            "serverLaunchTimeout": 20000,
+            "filterStderr": true,
+            "filterStdout": false,
+            "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+            "preLaunchTask": "erase",
+            "setupCommands": [
+                { "text": "cd ${workspaceRoot}/build" },
+                { "text": "file I2C-TEST.elf", "description": "load file", "ignoreFailures": false},
+                { "text": "target extended-remote localhost:3333", "description": "connect to target", "ignoreFailures": false },
+                { "text": "monitor reset halt", "description": "perform a reset and halt the target", "ignoreFailures": false },
+                { "text": "load", "description": "flash target", "ignoreFailures": false },
+                { "text": "set output-radix 16", "description": "set the default numeric base to 16", "ignoreFailures": false }
+            ],
+            "logging": {
+                "moduleLoad": true,
+                "trace": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "exceptions": true
+            },
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/Program Files (x86)/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-gdb.exe",
+            "debugServerPath": "C:/openocd/bin/openocd.exe"
+        }
+    ]
+}

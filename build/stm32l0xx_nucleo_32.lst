@@ -1,0 +1,1309 @@
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32l0xx_nucleo_32.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.BSP_GetVersion,"ax",%progbits
+  16              		.align	1
+  17              		.global	BSP_GetVersion
+  18              		.syntax unified
+  19              		.code	16
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	BSP_GetVersion:
+  24              	.LFB34:
+  25              		.file 1 "Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c"
+   1:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+   2:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   ******************************************************************************
+   3:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @file    stm32l0xx_nucleo_32.c
+   4:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @author  MCD Application Team
+   5:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief   This file provides set of firmware functions to manage:
+   6:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *          - LEDs and push-button available on STM32L0XX-Nucleo Kit 
+   7:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *            from STMicroelectronics
+   8:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   ******************************************************************************
+   9:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @attention
+  10:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *
+  11:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * <h2><center>&copy; Copyright(c) 2016 STMicroelectronics.
+  12:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * All rights reserved.</center></h2>
+  13:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *
+  14:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  15:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * the "License"; You may not use this file except in compliance with the
+  16:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * License. You may obtain a copy of the License at:
+  17:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  18:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *
+  19:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   ******************************************************************************
+  20:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  21:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+  22:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /* Includes ------------------------------------------------------------------*/
+  23:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #include "stm32l0xx_nucleo_32.h"
+  24:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     
+  25:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /** @addtogroup BSP
+  26:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @{
+  27:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  28:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  29:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /** @addtogroup STM32L0XX_NUCLEO_32 NUCLEO 32
+  30:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief This file provides set of firmware functions to manage Leds and push-button
+  31:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *        available on STM32L0XX-Nucleo Kit from STMicroelectronics.
+  32:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @{
+  33:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 2
+
+
+  34:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  35:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /** @defgroup STM32L0XX_NUCLEO_32_Private_Defines Private Defines
+  36:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @{
+  37:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  38:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  39:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+  40:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief STM32L0XX NUCLEO BSP Driver version number
+  41:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+  42:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define __STM32L0XX_NUCLEO_32_BSP_VERSION_MAIN   (0x01) /*!< [31:24] main version */
+  43:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define __STM32L0XX_NUCLEO_32_BSP_VERSION_SUB1   (0x00) /*!< [23:16] sub1 version */
+  44:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define __STM32L0XX_NUCLEO_32_BSP_VERSION_SUB2   (0x04) /*!< [15:8]  sub2 version */
+  45:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define __STM32L0XX_NUCLEO_32_BSP_VERSION_RC     (0x00) /*!< [7:0]  release candidate */
+  46:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define __STM32L0XX_NUCLEO_32_BSP_VERSION         ((__STM32L0XX_NUCLEO_32_BSP_VERSION_MAIN << 24)\
+  47:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****                                              |(__STM32L0XX_NUCLEO_32_BSP_VERSION_SUB1 << 16)\
+  48:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****                                              |(__STM32L0XX_NUCLEO_32_BSP_VERSION_SUB2 << 8 )\
+  49:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****                                              |(__STM32L0XX_NUCLEO_32_BSP_VERSION_RC))
+  50:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  51:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+  52:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief LINK SD Card
+  53:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+  54:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define SD_DUMMY_BYTE            0xFF    
+  55:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #define SD_NO_RESPONSE_EXPECTED  0x80
+  56:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  57:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+  58:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @}
+  59:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  60:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  61:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /** @defgroup STM32L0XX_NUCLEO_32_Private_Variables Private Variables
+  62:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @{
+  63:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  64:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** GPIO_TypeDef* LED_PORT[LEDn] = {LED3_GPIO_PORT};
+  65:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** const uint16_t LED_PIN[LEDn] = {LED3_PIN};
+  66:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  67:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+  68:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****  * @brief BUS variables
+  69:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****  */
+  70:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #if defined(HAL_I2C_MODULE_ENABLED)
+  71:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** uint32_t I2c1Timeout = BSP_I2C1_TIMEOUT_MAX;    /*<! Value of Timeout when I2C1 communication fails
+  72:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** I2C_HandleTypeDef heval_I2c1;
+  73:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #endif /* HAL_I2C_MODULE_ENABLED */
+  74:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  75:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #ifdef HAL_SPI_MODULE_ENABLED
+  76:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** uint32_t SpixTimeout = NUCLEO_SPIx_TIMEOUT_MAX; /*<! Value of Timeout when SPI communication fails 
+  77:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static SPI_HandleTypeDef hnucleo_Spi;
+  78:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #endif /* HAL_SPI_MODULE_ENABLED */
+  79:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  80:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #ifdef HAL_ADC_MODULE_ENABLED
+  81:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static ADC_HandleTypeDef hnucleo_Adc;
+  82:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /* ADC channel configuration structure declaration */
+  83:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static ADC_ChannelConfTypeDef sConfig;
+  84:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #endif /* HAL_ADC_MODULE_ENABLED */
+  85:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+  86:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @}
+  87:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  88:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  89:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /** @defgroup STM32L0XX_NUCLEO_32_Private_Function_Prototypes Private Function Prototypes
+  90:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @{
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 3
+
+
+  91:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+  92:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+  93:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #ifdef HAL_SPI_MODULE_ENABLED
+  94:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static void               SPIx_Init(void);
+  95:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static void               SPIx_Write(uint8_t Value);
+  96:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static uint32_t           SPIx_Read(void);
+  97:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static void               SPIx_Error (void);
+  98:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static void               SPIx_MspInit(SPI_HandleTypeDef *hspi);
+  99:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 100:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /* SD IO functions */
+ 101:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      SD_IO_Init(void);
+ 102:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** HAL_StatusTypeDef         SD_IO_WriteCmd(uint8_t Cmd, uint32_t Arg, uint8_t Crc, uint8_t Response);
+ 103:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** HAL_StatusTypeDef         SD_IO_WaitResponse(uint8_t Response);
+ 104:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      SD_IO_WriteDummy(void);
+ 105:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      SD_IO_WriteByte(uint8_t Data);
+ 106:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** uint8_t                   SD_IO_ReadByte(void);
+ 107:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 108:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /* LCD IO functions */
+ 109:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      LCD_IO_Init(void);
+ 110:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      LCD_IO_WriteData(uint8_t Data);
+ 111:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      LCD_IO_WriteMultipleData(uint8_t *pData, uint32_t Size);
+ 112:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      LCD_IO_WriteReg(uint8_t LCDReg);
+ 113:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void                      LCD_Delay(uint32_t delay);
+ 114:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #endif /* HAL_SPI_MODULE_ENABLED */
+ 115:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 116:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #ifdef HAL_ADC_MODULE_ENABLED
+ 117:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static void               ADCx_Init(void);
+ 118:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** static void               ADCx_MspInit(ADC_HandleTypeDef *hadc);
+ 119:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #endif /* HAL_ADC_MODULE_ENABLED */
+ 120:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 121:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @}
+ 122:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+ 123:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 124:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /** @defgroup STM32L0XX_NUCLEO_32_Private_Functions Private Functions
+ 125:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @{
+ 126:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */ 
+ 127:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 128:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 129:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  This method returns the STM32L0XX NUCLEO BSP Driver revision
+ 130:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval version : 0xXYZR (8bits for each decimal, R for RC)
+ 131:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 132:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** uint32_t BSP_GetVersion(void)
+ 133:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+  26              		.loc 1 133 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+ 134:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   return __STM32L0XX_NUCLEO_32_BSP_VERSION;
+ 135:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+  31              		.loc 1 135 0
+  32 0000 0048     		ldr	r0, .L2
+  33              		@ sp needed
+  34 0002 7047     		bx	lr
+  35              	.L3:
+  36              		.align	2
+  37              	.L2:
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 4
+
+
+  38 0004 00040001 		.word	16778240
+  39              		.cfi_endproc
+  40              	.LFE34:
+  42              		.section	.text.BSP_LED_Init,"ax",%progbits
+  43              		.align	1
+  44              		.global	BSP_LED_Init
+  45              		.syntax unified
+  46              		.code	16
+  47              		.thumb_func
+  48              		.fpu softvfp
+  50              	BSP_LED_Init:
+  51              	.LFB35:
+ 136:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 137:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 138:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Configures LED GPIO.
+ 139:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Led: Specifies the Led to be configured. 
+ 140:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *   This parameter can be one of following parameters:
+ 141:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *            @arg  LED3
+ 142:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 143:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 144:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void BSP_LED_Init(Led_TypeDef Led)
+ 145:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+  52              		.loc 1 145 0
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 24
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56              	.LVL0:
+  57 0000 30B5     		push	{r4, r5, lr}
+  58              	.LCFI0:
+  59              		.cfi_def_cfa_offset 12
+  60              		.cfi_offset 4, -12
+  61              		.cfi_offset 5, -8
+  62              		.cfi_offset 14, -4
+  63 0002 87B0     		sub	sp, sp, #28
+  64              	.LCFI1:
+  65              		.cfi_def_cfa_offset 40
+  66              	.LBB2:
+ 146:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitTypeDef  GPIO_InitStruct;
+ 147:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 148:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Enable the GPIO_LED Clock */
+ 149:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   LEDx_GPIO_CLK_ENABLE(Led);
+  67              		.loc 1 149 0
+  68 0004 0E4A     		ldr	r2, .L5
+  69 0006 D16A     		ldr	r1, [r2, #44]
+  70 0008 0223     		movs	r3, #2
+  71 000a 1943     		orrs	r1, r3
+  72 000c D162     		str	r1, [r2, #44]
+  73 000e D26A     		ldr	r2, [r2, #44]
+  74 0010 1340     		ands	r3, r2
+  75 0012 0093     		str	r3, [sp]
+  76 0014 009B     		ldr	r3, [sp]
+  77              	.LBE2:
+ 150:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 151:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Configure the GPIO_LED pin */
+ 152:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Pin = LED_PIN[Led];
+  78              		.loc 1 152 0
+  79 0016 0823     		movs	r3, #8
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 5
+
+
+  80 0018 0193     		str	r3, [sp, #4]
+ 153:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  81              		.loc 1 153 0
+  82 001a 073B     		subs	r3, r3, #7
+  83 001c 0293     		str	r3, [sp, #8]
+ 154:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  84              		.loc 1 154 0
+  85 001e 0023     		movs	r3, #0
+  86 0020 0393     		str	r3, [sp, #12]
+ 155:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  87              		.loc 1 155 0
+  88 0022 0333     		adds	r3, r3, #3
+  89 0024 0493     		str	r3, [sp, #16]
+ 156:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 157:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_GPIO_Init(LED_PORT[Led], &GPIO_InitStruct);
+  90              		.loc 1 157 0
+  91 0026 074D     		ldr	r5, .L5+4
+  92 0028 8400     		lsls	r4, r0, #2
+  93 002a 01A9     		add	r1, sp, #4
+  94 002c 6059     		ldr	r0, [r4, r5]
+  95              	.LVL1:
+  96 002e FFF7FEFF 		bl	HAL_GPIO_Init
+  97              	.LVL2:
+ 158:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_GPIO_WritePin(LED_PORT[Led], LED_PIN[Led], GPIO_PIN_RESET); 
+  98              		.loc 1 158 0
+  99 0032 6059     		ldr	r0, [r4, r5]
+ 100 0034 0022     		movs	r2, #0
+ 101 0036 0821     		movs	r1, #8
+ 102 0038 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 103              	.LVL3:
+ 159:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 104              		.loc 1 159 0
+ 105 003c 07B0     		add	sp, sp, #28
+ 106              		@ sp needed
+ 107 003e 30BD     		pop	{r4, r5, pc}
+ 108              	.L6:
+ 109              		.align	2
+ 110              	.L5:
+ 111 0040 00100240 		.word	1073876992
+ 112 0044 00000000 		.word	.LANCHOR0
+ 113              		.cfi_endproc
+ 114              	.LFE35:
+ 116              		.section	.text.BSP_LED_On,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	BSP_LED_On
+ 119              		.syntax unified
+ 120              		.code	16
+ 121              		.thumb_func
+ 122              		.fpu softvfp
+ 124              	BSP_LED_On:
+ 125              	.LFB36:
+ 160:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 161:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 162:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Turns selected LED On.
+ 163:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Led: Specifies the Led to be set on. 
+ 164:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *   This parameter can be one of following parameters:
+ 165:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *            @arg  LED3
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 6
+
+
+ 166:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 167:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 168:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void BSP_LED_On(Led_TypeDef Led)
+ 169:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 126              		.loc 1 169 0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              	.LVL4:
+ 131 0000 10B5     		push	{r4, lr}
+ 132              	.LCFI2:
+ 133              		.cfi_def_cfa_offset 8
+ 134              		.cfi_offset 4, -8
+ 135              		.cfi_offset 14, -4
+ 170:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_GPIO_WritePin(LED_PORT[Led], LED_PIN[Led], GPIO_PIN_SET); 
+ 136              		.loc 1 170 0
+ 137 0002 8000     		lsls	r0, r0, #2
+ 138              	.LVL5:
+ 139 0004 034B     		ldr	r3, .L8
+ 140 0006 C058     		ldr	r0, [r0, r3]
+ 141 0008 0122     		movs	r2, #1
+ 142 000a 0821     		movs	r1, #8
+ 143 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 144              	.LVL6:
+ 171:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 145              		.loc 1 171 0
+ 146              		@ sp needed
+ 147 0010 10BD     		pop	{r4, pc}
+ 148              	.L9:
+ 149 0012 C046     		.align	2
+ 150              	.L8:
+ 151 0014 00000000 		.word	.LANCHOR0
+ 152              		.cfi_endproc
+ 153              	.LFE36:
+ 155              		.section	.text.BSP_LED_Off,"ax",%progbits
+ 156              		.align	1
+ 157              		.global	BSP_LED_Off
+ 158              		.syntax unified
+ 159              		.code	16
+ 160              		.thumb_func
+ 161              		.fpu softvfp
+ 163              	BSP_LED_Off:
+ 164              	.LFB37:
+ 172:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 173:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 174:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Turns selected LED Off. 
+ 175:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Led: Specifies the Led to be set off. 
+ 176:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *   This parameter can be one of following parameters:
+ 177:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *            @arg  LED3
+ 178:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 179:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 180:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void BSP_LED_Off(Led_TypeDef Led)
+ 181:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 165              		.loc 1 181 0
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 7
+
+
+ 169              	.LVL7:
+ 170 0000 10B5     		push	{r4, lr}
+ 171              	.LCFI3:
+ 172              		.cfi_def_cfa_offset 8
+ 173              		.cfi_offset 4, -8
+ 174              		.cfi_offset 14, -4
+ 182:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_GPIO_WritePin(LED_PORT[Led], LED_PIN[Led], GPIO_PIN_RESET); 
+ 175              		.loc 1 182 0
+ 176 0002 8000     		lsls	r0, r0, #2
+ 177              	.LVL8:
+ 178 0004 034B     		ldr	r3, .L11
+ 179 0006 C058     		ldr	r0, [r0, r3]
+ 180 0008 0022     		movs	r2, #0
+ 181 000a 0821     		movs	r1, #8
+ 182 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 183              	.LVL9:
+ 183:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 184              		.loc 1 183 0
+ 185              		@ sp needed
+ 186 0010 10BD     		pop	{r4, pc}
+ 187              	.L12:
+ 188 0012 C046     		.align	2
+ 189              	.L11:
+ 190 0014 00000000 		.word	.LANCHOR0
+ 191              		.cfi_endproc
+ 192              	.LFE37:
+ 194              		.section	.text.BSP_LED_Toggle,"ax",%progbits
+ 195              		.align	1
+ 196              		.global	BSP_LED_Toggle
+ 197              		.syntax unified
+ 198              		.code	16
+ 199              		.thumb_func
+ 200              		.fpu softvfp
+ 202              	BSP_LED_Toggle:
+ 203              	.LFB38:
+ 184:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 185:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 186:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Toggles the selected LED.
+ 187:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Led: Specifies the Led to be toggled. 
+ 188:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *   This parameter can be one of following parameters:
+ 189:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   *            @arg  LED3
+ 190:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 191:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 192:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void BSP_LED_Toggle(Led_TypeDef Led)
+ 193:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 204              		.loc 1 193 0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              	.LVL10:
+ 209 0000 10B5     		push	{r4, lr}
+ 210              	.LCFI4:
+ 211              		.cfi_def_cfa_offset 8
+ 212              		.cfi_offset 4, -8
+ 213              		.cfi_offset 14, -4
+ 194:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_GPIO_TogglePin(LED_PORT[Led], LED_PIN[Led]);
+ 214              		.loc 1 194 0
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 8
+
+
+ 215 0002 8000     		lsls	r0, r0, #2
+ 216              	.LVL11:
+ 217 0004 024B     		ldr	r3, .L14
+ 218 0006 C058     		ldr	r0, [r0, r3]
+ 219 0008 0821     		movs	r1, #8
+ 220 000a FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 221              	.LVL12:
+ 195:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 222              		.loc 1 195 0
+ 223              		@ sp needed
+ 224 000e 10BD     		pop	{r4, pc}
+ 225              	.L15:
+ 226              		.align	2
+ 227              	.L14:
+ 228 0010 00000000 		.word	.LANCHOR0
+ 229              		.cfi_endproc
+ 230              	.LFE38:
+ 232              		.section	.text.I2C1_IsDeviceReady,"ax",%progbits
+ 233              		.align	1
+ 234              		.global	I2C1_IsDeviceReady
+ 235              		.syntax unified
+ 236              		.code	16
+ 237              		.thumb_func
+ 238              		.fpu softvfp
+ 240              	I2C1_IsDeviceReady:
+ 241              	.LFB43:
+ 196:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 197:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /******************************************************************************
+ 198:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****                             BUS OPERATIONS
+ 199:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** *******************************************************************************/
+ 200:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** #if defined(HAL_I2C_MODULE_ENABLED)
+ 201:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /******************************* I2C Routines *********************************/
+ 202:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 203:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 204:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief I2C Bus initialization
+ 205:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 206:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 207:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void I2C1_Init(void)
+ 208:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 209:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   if(HAL_I2C_GetState(&heval_I2c1) == HAL_I2C_STATE_RESET)
+ 210:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 211:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Instance              = BSP_I2C1;
+ 212:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.Timing           = I2C1_TIMING;
+ 213:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.OwnAddress1      = 0;
+ 214:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.AddressingMode   = I2C_ADDRESSINGMODE_7BIT;
+ 215:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.DualAddressMode  = I2C_DUALADDRESS_DISABLE;
+ 216:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.OwnAddress2      = 0;
+ 217:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+ 218:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.GeneralCallMode  = I2C_GENERALCALL_DISABLE;
+ 219:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.NoStretchMode    = I2C_NOSTRETCH_DISABLE;  
+ 220:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 221:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     /* Init the I2C */
+ 222:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     I2C1_MspInit(&heval_I2c1);
+ 223:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     HAL_I2C_Init(&heval_I2c1);
+ 224:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 225:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 226:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 9
+
+
+ 227:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 228:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Writes a single data.
+ 229:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Addr: I2C address
+ 230:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Reg: Register address 
+ 231:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Value: Data to be written
+ 232:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 233:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 234:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void I2C1_Write(uint8_t Addr, uint8_t Reg, uint8_t Value)
+ 235:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 236:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 237:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 238:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   status = HAL_I2C_Mem_Write(&heval_I2c1, Addr, (uint16_t)Reg, I2C_MEMADD_SIZE_8BIT, &Value, 1, 100
+ 239:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 240:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Check the communication status */
+ 241:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   if(status != HAL_OK)
+ 242:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 243:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     /* Execute user timeout callback */
+ 244:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     I2C1_Error();
+ 245:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 246:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 247:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 248:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 249:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Reads a single data.
+ 250:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Addr: I2C address
+ 251:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Reg: Register address 
+ 252:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval Read data
+ 253:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 254:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** uint8_t I2C1_Read(uint8_t Addr, uint8_t Reg)
+ 255:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 256:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 257:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   uint8_t Value = 0;
+ 258:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 259:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   status = HAL_I2C_Mem_Read(&heval_I2c1, Addr, Reg, I2C_MEMADD_SIZE_8BIT, &Value, 1, 1000);
+ 260:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 261:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Check the communication status */
+ 262:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   if(status != HAL_OK)
+ 263:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 264:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     /* Execute user timeout callback */
+ 265:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     I2C1_Error();
+ 266:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 267:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   return Value;   
+ 268:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 269:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 270:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 271:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 272:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 273:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Reads multiple data on the BUS.
+ 274:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Addr  : I2C Address
+ 275:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Reg   : Reg Address 
+ 276:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  RegSize : The target register size (can be 8BIT or 16BIT)
+ 277:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  pBuffer : pointer to read data buffer
+ 278:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Length : length of the data
+ 279:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval 0 if no problems to read multiple data
+ 280:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 281:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** HAL_StatusTypeDef I2C1_ReadBuffer(uint16_t Addr, uint8_t Reg, uint16_t RegSize, uint8_t *pBuffer, u
+ 282:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 283:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 10
+
+
+ 284:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 285:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   status = HAL_I2C_Mem_Read(&heval_I2c1, Addr, Reg, RegSize, pBuffer, Length, I2c1Timeout);
+ 286:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 287:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Check the communication status */
+ 288:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   if(status != HAL_OK)
+ 289:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 290:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     /* Re-Initiaize the BUS */
+ 291:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     I2C1_Error();
+ 292:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 293:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   return status;
+ 294:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 295:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 296:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 297:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Checks if target device is ready for communication. 
+ 298:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @note   This function is used with Memory devices
+ 299:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  DevAddress: Target device address
+ 300:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Trials: Number of trials
+ 301:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval HAL status
+ 302:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 303:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** HAL_StatusTypeDef I2C1_IsDeviceReady(uint16_t DevAddress, uint32_t Trials)
+ 304:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** { 
+ 242              		.loc 1 304 0
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 0
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              	.LVL13:
+ 247 0000 10B5     		push	{r4, lr}
+ 248              	.LCFI5:
+ 249              		.cfi_def_cfa_offset 8
+ 250              		.cfi_offset 4, -8
+ 251              		.cfi_offset 14, -4
+ 252 0002 0A00     		movs	r2, r1
+ 305:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   return (HAL_I2C_IsDeviceReady(&heval_I2c1, DevAddress, Trials, I2c1Timeout));
+ 253              		.loc 1 305 0
+ 254 0004 034B     		ldr	r3, .L17
+ 255 0006 1B68     		ldr	r3, [r3]
+ 256 0008 0100     		movs	r1, r0
+ 257              	.LVL14:
+ 258 000a 0348     		ldr	r0, .L17+4
+ 259              	.LVL15:
+ 260 000c FFF7FEFF 		bl	HAL_I2C_IsDeviceReady
+ 261              	.LVL16:
+ 306:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 262              		.loc 1 306 0
+ 263              		@ sp needed
+ 264 0010 10BD     		pop	{r4, pc}
+ 265              	.L18:
+ 266 0012 C046     		.align	2
+ 267              	.L17:
+ 268 0014 00000000 		.word	.LANCHOR1
+ 269 0018 00000000 		.word	heval_I2c1
+ 270              		.cfi_endproc
+ 271              	.LFE43:
+ 273              		.section	.text.I2C1_MspInit,"ax",%progbits
+ 274              		.align	1
+ 275              		.global	I2C1_MspInit
+ 276              		.syntax unified
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 11
+
+
+ 277              		.code	16
+ 278              		.thumb_func
+ 279              		.fpu softvfp
+ 281              	I2C1_MspInit:
+ 282              	.LFB46:
+ 307:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 308:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 309:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Write a value in a register of the device through BUS.
+ 310:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Addr: Device address on BUS Bus.  
+ 311:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Reg: The target register address to write
+ 312:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  RegSize: The target register size (can be 8BIT or 16BIT)
+ 313:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  pBuffer: The target register value to be written 
+ 314:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param  Length: buffer size to be written
+ 315:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 316:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 317:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** HAL_StatusTypeDef I2C1_WriteBuffer(uint16_t Addr, uint8_t Reg, uint16_t RegSize, uint8_t *pBuffer, 
+ 318:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 319:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 320:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 321:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   status = HAL_I2C_Mem_Write(&heval_I2c1, Addr, Reg, RegSize, pBuffer, Length, I2c1Timeout); 
+ 322:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 323:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Check the communication status */
+ 324:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   if(status != HAL_OK)
+ 325:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 326:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     /* Re-Initiaize the BUS */
+ 327:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     I2C1_Error();
+ 328:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }        
+ 329:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   return status;
+ 330:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 331:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 332:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 333:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief  Manages error callback by re-initializing I2C.
+ 334:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 335:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 336:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void I2C1_Error(void)
+ 337:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 338:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* De-initialize the I2C communication BUS */
+ 339:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_I2C_DeInit(&heval_I2c1);
+ 340:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 341:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Re-Initiaize the I2C communication BUS */
+ 342:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   I2C1_Init();
+ 343:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 344:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 345:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** /**
+ 346:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @brief I2C MSP Initialization
+ 347:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @param hi2c: I2C handle
+ 348:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   * @retval None
+ 349:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   */
+ 350:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** void I2C1_MspInit(I2C_HandleTypeDef *hi2c)
+ 351:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** {
+ 283              		.loc 1 351 0
+ 284              		.cfi_startproc
+ 285              		@ args = 0, pretend = 0, frame = 48
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287              	.LVL17:
+ 288 0000 10B5     		push	{r4, lr}
+ 289              	.LCFI6:
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 12
+
+
+ 290              		.cfi_def_cfa_offset 8
+ 291              		.cfi_offset 4, -8
+ 292              		.cfi_offset 14, -4
+ 293 0002 8CB0     		sub	sp, sp, #48
+ 294              	.LCFI7:
+ 295              		.cfi_def_cfa_offset 56
+ 352:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitTypeDef GPIO_InitStruct;
+ 353:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   RCC_PeriphCLKInitTypeDef RCC_PeriphCLKInitStruct;
+ 354:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 355:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /*##-1- Set source clock to SYSCLK for I2C1 ################################################*/  
+ 356:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   RCC_PeriphCLKInitStruct.PeriphClockSelection = RCC_PERIPHCLK_I2C1;
+ 296              		.loc 1 356 0
+ 297 0004 0823     		movs	r3, #8
+ 298 0006 0193     		str	r3, [sp, #4]
+ 357:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   RCC_PeriphCLKInitStruct.I2c1ClockSelection = RCC_I2C1CLKSOURCE_SYSCLK;
+ 299              		.loc 1 357 0
+ 300 0008 8023     		movs	r3, #128
+ 301 000a 5B01     		lsls	r3, r3, #5
+ 302 000c 0593     		str	r3, [sp, #20]
+ 358:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_RCCEx_PeriphCLKConfig(&RCC_PeriphCLKInitStruct);
+ 303              		.loc 1 358 0
+ 304 000e 01A8     		add	r0, sp, #4
+ 305              	.LVL18:
+ 306 0010 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 307              	.LVL19:
+ 308              	.LBB3:
+ 359:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 360:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /*##-2- Configure the GPIOs ################################################*/  
+ 361:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 362:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Enable GPIO clock */
+ 363:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   BSP_I2C1_GPIO_CLK_ENABLE();
+ 309              		.loc 1 363 0
+ 310 0014 124C     		ldr	r4, .L20
+ 311 0016 E26A     		ldr	r2, [r4, #44]
+ 312 0018 0223     		movs	r3, #2
+ 313 001a 1A43     		orrs	r2, r3
+ 314 001c E262     		str	r2, [r4, #44]
+ 315 001e E26A     		ldr	r2, [r4, #44]
+ 316 0020 1340     		ands	r3, r2
+ 317 0022 0093     		str	r3, [sp]
+ 318 0024 009B     		ldr	r3, [sp]
+ 319              	.LBE3:
+ 364:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 365:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Configure I2C SCL & SDA as alternate function  */
+ 366:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Pin       = (BSP_I2C1_SCL_PIN| BSP_I2C1_SDA_PIN);
+ 320              		.loc 1 366 0
+ 321 0026 C023     		movs	r3, #192
+ 322 0028 0793     		str	r3, [sp, #28]
+ 367:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Mode      = GPIO_MODE_AF_OD;
+ 323              		.loc 1 367 0
+ 324 002a AE3B     		subs	r3, r3, #174
+ 325 002c 0893     		str	r3, [sp, #32]
+ 368:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Pull      = GPIO_NOPULL;
+ 326              		.loc 1 368 0
+ 327 002e 0023     		movs	r3, #0
+ 328 0030 0993     		str	r3, [sp, #36]
+ 369:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Speed     = GPIO_SPEED_FREQ_VERY_HIGH;
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 13
+
+
+ 329              		.loc 1 369 0
+ 330 0032 0333     		adds	r3, r3, #3
+ 331 0034 0A93     		str	r3, [sp, #40]
+ 370:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   GPIO_InitStruct.Alternate = BSP_I2C1_SCL_SDA_AF;
+ 332              		.loc 1 370 0
+ 333 0036 023B     		subs	r3, r3, #2
+ 334 0038 0B93     		str	r3, [sp, #44]
+ 371:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_GPIO_Init(BSP_I2C1_GPIO_PORT, &GPIO_InitStruct);
+ 335              		.loc 1 371 0
+ 336 003a 07A9     		add	r1, sp, #28
+ 337 003c 0948     		ldr	r0, .L20+4
+ 338 003e FFF7FEFF 		bl	HAL_GPIO_Init
+ 339              	.LVL20:
+ 372:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 373:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /*##-3- Configure the Eval I2C peripheral #######################################*/ 
+ 374:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Enable I2C clock */
+ 375:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   BSP_I2C1_CLK_ENABLE();
+ 340              		.loc 1 375 0
+ 341 0042 A26B     		ldr	r2, [r4, #56]
+ 342 0044 8023     		movs	r3, #128
+ 343 0046 9B03     		lsls	r3, r3, #14
+ 344 0048 1A43     		orrs	r2, r3
+ 345 004a A263     		str	r2, [r4, #56]
+ 376:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 377:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Force the I2C peripheral clock reset */
+ 378:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   BSP_I2C1_FORCE_RESET();
+ 346              		.loc 1 378 0
+ 347 004c A26A     		ldr	r2, [r4, #40]
+ 348 004e 1343     		orrs	r3, r2
+ 349 0050 A362     		str	r3, [r4, #40]
+ 379:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 380:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* Release the I2C peripheral clock reset */
+ 381:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   BSP_I2C1_RELEASE_RESET();
+ 350              		.loc 1 381 0
+ 351 0052 A36A     		ldr	r3, [r4, #40]
+ 352 0054 044A     		ldr	r2, .L20+8
+ 353 0056 1340     		ands	r3, r2
+ 354 0058 A362     		str	r3, [r4, #40]
+ 382:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 355              		.loc 1 382 0
+ 356 005a 0CB0     		add	sp, sp, #48
+ 357              		@ sp needed
+ 358 005c 10BD     		pop	{r4, pc}
+ 359              	.L21:
+ 360 005e C046     		.align	2
+ 361              	.L20:
+ 362 0060 00100240 		.word	1073876992
+ 363 0064 00040050 		.word	1342178304
+ 364 0068 FFFFDFFF 		.word	-2097153
+ 365              		.cfi_endproc
+ 366              	.LFE46:
+ 368              		.section	.text.I2C1_Init,"ax",%progbits
+ 369              		.align	1
+ 370              		.global	I2C1_Init
+ 371              		.syntax unified
+ 372              		.code	16
+ 373              		.thumb_func
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 14
+
+
+ 374              		.fpu softvfp
+ 376              	I2C1_Init:
+ 377              	.LFB39:
+ 208:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   if(HAL_I2C_GetState(&heval_I2c1) == HAL_I2C_STATE_RESET)
+ 378              		.loc 1 208 0
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382 0000 10B5     		push	{r4, lr}
+ 383              	.LCFI8:
+ 384              		.cfi_def_cfa_offset 8
+ 385              		.cfi_offset 4, -8
+ 386              		.cfi_offset 14, -4
+ 209:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 387              		.loc 1 209 0
+ 388 0002 0D48     		ldr	r0, .L25
+ 389 0004 FFF7FEFF 		bl	HAL_I2C_GetState
+ 390              	.LVL21:
+ 391 0008 0028     		cmp	r0, #0
+ 392 000a 00D0     		beq	.L24
+ 393              	.L22:
+ 225:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 394              		.loc 1 225 0
+ 395              		@ sp needed
+ 396 000c 10BD     		pop	{r4, pc}
+ 397              	.L24:
+ 211:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.Timing           = I2C1_TIMING;
+ 398              		.loc 1 211 0
+ 399 000e 0A4C     		ldr	r4, .L25
+ 400 0010 0A4B     		ldr	r3, .L25+4
+ 401 0012 2360     		str	r3, [r4]
+ 212:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.OwnAddress1      = 0;
+ 402              		.loc 1 212 0
+ 403 0014 0A4B     		ldr	r3, .L25+8
+ 404 0016 6360     		str	r3, [r4, #4]
+ 213:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.AddressingMode   = I2C_ADDRESSINGMODE_7BIT;
+ 405              		.loc 1 213 0
+ 406 0018 0023     		movs	r3, #0
+ 407 001a A360     		str	r3, [r4, #8]
+ 214:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.DualAddressMode  = I2C_DUALADDRESS_DISABLE;
+ 408              		.loc 1 214 0
+ 409 001c 0122     		movs	r2, #1
+ 410 001e E260     		str	r2, [r4, #12]
+ 215:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.OwnAddress2      = 0;
+ 411              		.loc 1 215 0
+ 412 0020 2361     		str	r3, [r4, #16]
+ 216:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+ 413              		.loc 1 216 0
+ 414 0022 6361     		str	r3, [r4, #20]
+ 217:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.GeneralCallMode  = I2C_GENERALCALL_DISABLE;
+ 415              		.loc 1 217 0
+ 416 0024 A361     		str	r3, [r4, #24]
+ 218:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     heval_I2c1.Init.NoStretchMode    = I2C_NOSTRETCH_DISABLE;  
+ 417              		.loc 1 218 0
+ 418 0026 E361     		str	r3, [r4, #28]
+ 219:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 419              		.loc 1 219 0
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 15
+
+
+ 420 0028 2362     		str	r3, [r4, #32]
+ 222:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****     HAL_I2C_Init(&heval_I2c1);
+ 421              		.loc 1 222 0
+ 422 002a 2000     		movs	r0, r4
+ 423 002c FFF7FEFF 		bl	I2C1_MspInit
+ 424              	.LVL22:
+ 223:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 425              		.loc 1 223 0
+ 426 0030 2000     		movs	r0, r4
+ 427 0032 FFF7FEFF 		bl	HAL_I2C_Init
+ 428              	.LVL23:
+ 225:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 429              		.loc 1 225 0
+ 430 0036 E9E7     		b	.L22
+ 431              	.L26:
+ 432              		.align	2
+ 433              	.L25:
+ 434 0038 00000000 		.word	heval_I2c1
+ 435 003c 00540040 		.word	1073763328
+ 436 0040 B5809000 		.word	9470133
+ 437              		.cfi_endproc
+ 438              	.LFE39:
+ 440              		.section	.text.I2C1_Error,"ax",%progbits
+ 441              		.align	1
+ 442              		.global	I2C1_Error
+ 443              		.syntax unified
+ 444              		.code	16
+ 445              		.thumb_func
+ 446              		.fpu softvfp
+ 448              	I2C1_Error:
+ 449              	.LFB45:
+ 337:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   /* De-initialize the I2C communication BUS */
+ 450              		.loc 1 337 0
+ 451              		.cfi_startproc
+ 452              		@ args = 0, pretend = 0, frame = 0
+ 453              		@ frame_needed = 0, uses_anonymous_args = 0
+ 454 0000 10B5     		push	{r4, lr}
+ 455              	.LCFI9:
+ 456              		.cfi_def_cfa_offset 8
+ 457              		.cfi_offset 4, -8
+ 458              		.cfi_offset 14, -4
+ 339:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 459              		.loc 1 339 0
+ 460 0002 0348     		ldr	r0, .L28
+ 461 0004 FFF7FEFF 		bl	HAL_I2C_DeInit
+ 462              	.LVL24:
+ 342:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 463              		.loc 1 342 0
+ 464 0008 FFF7FEFF 		bl	I2C1_Init
+ 465              	.LVL25:
+ 343:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 466              		.loc 1 343 0
+ 467              		@ sp needed
+ 468 000c 10BD     		pop	{r4, pc}
+ 469              	.L29:
+ 470 000e C046     		.align	2
+ 471              	.L28:
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 16
+
+
+ 472 0010 00000000 		.word	heval_I2c1
+ 473              		.cfi_endproc
+ 474              	.LFE45:
+ 476              		.section	.text.I2C1_Write,"ax",%progbits
+ 477              		.align	1
+ 478              		.global	I2C1_Write
+ 479              		.syntax unified
+ 480              		.code	16
+ 481              		.thumb_func
+ 482              		.fpu softvfp
+ 484              	I2C1_Write:
+ 485              	.LFB40:
+ 235:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 486              		.loc 1 235 0
+ 487              		.cfi_startproc
+ 488              		@ args = 0, pretend = 0, frame = 8
+ 489              		@ frame_needed = 0, uses_anonymous_args = 0
+ 490              	.LVL26:
+ 491 0000 10B5     		push	{r4, lr}
+ 492              	.LCFI10:
+ 493              		.cfi_def_cfa_offset 8
+ 494              		.cfi_offset 4, -8
+ 495              		.cfi_offset 14, -4
+ 496 0002 86B0     		sub	sp, sp, #24
+ 497              	.LCFI11:
+ 498              		.cfi_def_cfa_offset 32
+ 499 0004 0B00     		movs	r3, r1
+ 500 0006 1724     		movs	r4, #23
+ 501 0008 6C44     		add	r4, r4, sp
+ 502 000a 2270     		strb	r2, [r4]
+ 503              	.LVL27:
+ 238:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 504              		.loc 1 238 0
+ 505 000c 81B2     		uxth	r1, r0
+ 506              	.LVL28:
+ 507 000e 9AB2     		uxth	r2, r3
+ 508              	.LVL29:
+ 509 0010 6423     		movs	r3, #100
+ 510 0012 0293     		str	r3, [sp, #8]
+ 511              	.LVL30:
+ 512 0014 633B     		subs	r3, r3, #99
+ 513 0016 0193     		str	r3, [sp, #4]
+ 514 0018 0094     		str	r4, [sp]
+ 515 001a 0548     		ldr	r0, .L33
+ 516              	.LVL31:
+ 517 001c FFF7FEFF 		bl	HAL_I2C_Mem_Write
+ 518              	.LVL32:
+ 241:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 519              		.loc 1 241 0
+ 520 0020 0028     		cmp	r0, #0
+ 521 0022 01D1     		bne	.L32
+ 522              	.LVL33:
+ 523              	.L30:
+ 246:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 524              		.loc 1 246 0
+ 525 0024 06B0     		add	sp, sp, #24
+ 526              		@ sp needed
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 17
+
+
+ 527 0026 10BD     		pop	{r4, pc}
+ 528              	.LVL34:
+ 529              	.L32:
+ 244:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 530              		.loc 1 244 0
+ 531 0028 FFF7FEFF 		bl	I2C1_Error
+ 532              	.LVL35:
+ 246:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 533              		.loc 1 246 0
+ 534 002c FAE7     		b	.L30
+ 535              	.L34:
+ 536 002e C046     		.align	2
+ 537              	.L33:
+ 538 0030 00000000 		.word	heval_I2c1
+ 539              		.cfi_endproc
+ 540              	.LFE40:
+ 542              		.section	.text.I2C1_Read,"ax",%progbits
+ 543              		.align	1
+ 544              		.global	I2C1_Read
+ 545              		.syntax unified
+ 546              		.code	16
+ 547              		.thumb_func
+ 548              		.fpu softvfp
+ 550              	I2C1_Read:
+ 551              	.LFB41:
+ 255:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 552              		.loc 1 255 0
+ 553              		.cfi_startproc
+ 554              		@ args = 0, pretend = 0, frame = 8
+ 555              		@ frame_needed = 0, uses_anonymous_args = 0
+ 556              	.LVL36:
+ 557 0000 00B5     		push	{lr}
+ 558              	.LCFI12:
+ 559              		.cfi_def_cfa_offset 4
+ 560              		.cfi_offset 14, -4
+ 561 0002 87B0     		sub	sp, sp, #28
+ 562              	.LCFI13:
+ 563              		.cfi_def_cfa_offset 32
+ 564 0004 0A00     		movs	r2, r1
+ 565              	.LVL37:
+ 257:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 566              		.loc 1 257 0
+ 567 0006 1723     		movs	r3, #23
+ 568 0008 6B44     		add	r3, r3, sp
+ 569 000a 0021     		movs	r1, #0
+ 570              	.LVL38:
+ 571 000c 1970     		strb	r1, [r3]
+ 259:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 572              		.loc 1 259 0
+ 573 000e 81B2     		uxth	r1, r0
+ 574 0010 92B2     		uxth	r2, r2
+ 575 0012 FA20     		movs	r0, #250
+ 576              	.LVL39:
+ 577 0014 8000     		lsls	r0, r0, #2
+ 578 0016 0290     		str	r0, [sp, #8]
+ 579 0018 0120     		movs	r0, #1
+ 580 001a 0190     		str	r0, [sp, #4]
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 18
+
+
+ 581 001c 0093     		str	r3, [sp]
+ 582 001e 0123     		movs	r3, #1
+ 583 0020 0648     		ldr	r0, .L38
+ 584 0022 FFF7FEFF 		bl	HAL_I2C_Mem_Read
+ 585              	.LVL40:
+ 262:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 586              		.loc 1 262 0
+ 587 0026 0028     		cmp	r0, #0
+ 588 0028 04D1     		bne	.L37
+ 589              	.LVL41:
+ 590              	.L36:
+ 267:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** }
+ 591              		.loc 1 267 0
+ 592 002a 1723     		movs	r3, #23
+ 593 002c 6B44     		add	r3, r3, sp
+ 594 002e 1878     		ldrb	r0, [r3]
+ 268:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 595              		.loc 1 268 0
+ 596 0030 07B0     		add	sp, sp, #28
+ 597              		@ sp needed
+ 598 0032 00BD     		pop	{pc}
+ 599              	.LVL42:
+ 600              	.L37:
+ 265:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 601              		.loc 1 265 0
+ 602 0034 FFF7FEFF 		bl	I2C1_Error
+ 603              	.LVL43:
+ 604 0038 F7E7     		b	.L36
+ 605              	.L39:
+ 606 003a C046     		.align	2
+ 607              	.L38:
+ 608 003c 00000000 		.word	heval_I2c1
+ 609              		.cfi_endproc
+ 610              	.LFE41:
+ 612              		.section	.text.I2C1_ReadBuffer,"ax",%progbits
+ 613              		.align	1
+ 614              		.global	I2C1_ReadBuffer
+ 615              		.syntax unified
+ 616              		.code	16
+ 617              		.thumb_func
+ 618              		.fpu softvfp
+ 620              	I2C1_ReadBuffer:
+ 621              	.LFB42:
+ 282:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 622              		.loc 1 282 0
+ 623              		.cfi_startproc
+ 624              		@ args = 4, pretend = 0, frame = 0
+ 625              		@ frame_needed = 0, uses_anonymous_args = 0
+ 626              	.LVL44:
+ 627 0000 30B5     		push	{r4, r5, lr}
+ 628              	.LCFI14:
+ 629              		.cfi_def_cfa_offset 12
+ 630              		.cfi_offset 4, -12
+ 631              		.cfi_offset 5, -8
+ 632              		.cfi_offset 14, -4
+ 633 0002 85B0     		sub	sp, sp, #20
+ 634              	.LCFI15:
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 19
+
+
+ 635              		.cfi_def_cfa_offset 32
+ 636 0004 1400     		movs	r4, r2
+ 637 0006 08AA     		add	r2, sp, #32
+ 638              	.LVL45:
+ 639 0008 1588     		ldrh	r5, [r2]
+ 640              	.LVL46:
+ 285:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 641              		.loc 1 285 0
+ 642 000a 8AB2     		uxth	r2, r1
+ 643              	.LVL47:
+ 644 000c 0849     		ldr	r1, .L43
+ 645              	.LVL48:
+ 646 000e 0968     		ldr	r1, [r1]
+ 647 0010 0291     		str	r1, [sp, #8]
+ 648 0012 0195     		str	r5, [sp, #4]
+ 649 0014 0093     		str	r3, [sp]
+ 650 0016 2300     		movs	r3, r4
+ 651              	.LVL49:
+ 652 0018 0100     		movs	r1, r0
+ 653 001a 0648     		ldr	r0, .L43+4
+ 654              	.LVL50:
+ 655 001c FFF7FEFF 		bl	HAL_I2C_Mem_Read
+ 656              	.LVL51:
+ 657 0020 041E     		subs	r4, r0, #0
+ 658              	.LVL52:
+ 288:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 659              		.loc 1 288 0
+ 660 0022 02D1     		bne	.L42
+ 661              	.LVL53:
+ 662              	.L41:
+ 294:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 663              		.loc 1 294 0
+ 664 0024 2000     		movs	r0, r4
+ 665 0026 05B0     		add	sp, sp, #20
+ 666              		@ sp needed
+ 667 0028 30BD     		pop	{r4, r5, pc}
+ 668              	.LVL54:
+ 669              	.L42:
+ 291:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }
+ 670              		.loc 1 291 0
+ 671 002a FFF7FEFF 		bl	I2C1_Error
+ 672              	.LVL55:
+ 673 002e F9E7     		b	.L41
+ 674              	.L44:
+ 675              		.align	2
+ 676              	.L43:
+ 677 0030 00000000 		.word	.LANCHOR1
+ 678 0034 00000000 		.word	heval_I2c1
+ 679              		.cfi_endproc
+ 680              	.LFE42:
+ 682              		.section	.text.I2C1_WriteBuffer,"ax",%progbits
+ 683              		.align	1
+ 684              		.global	I2C1_WriteBuffer
+ 685              		.syntax unified
+ 686              		.code	16
+ 687              		.thumb_func
+ 688              		.fpu softvfp
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 20
+
+
+ 690              	I2C1_WriteBuffer:
+ 691              	.LFB44:
+ 318:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 692              		.loc 1 318 0
+ 693              		.cfi_startproc
+ 694              		@ args = 4, pretend = 0, frame = 0
+ 695              		@ frame_needed = 0, uses_anonymous_args = 0
+ 696              	.LVL56:
+ 697 0000 30B5     		push	{r4, r5, lr}
+ 698              	.LCFI16:
+ 699              		.cfi_def_cfa_offset 12
+ 700              		.cfi_offset 4, -12
+ 701              		.cfi_offset 5, -8
+ 702              		.cfi_offset 14, -4
+ 703 0002 85B0     		sub	sp, sp, #20
+ 704              	.LCFI17:
+ 705              		.cfi_def_cfa_offset 32
+ 706 0004 1400     		movs	r4, r2
+ 707 0006 08AA     		add	r2, sp, #32
+ 708              	.LVL57:
+ 709 0008 1588     		ldrh	r5, [r2]
+ 710              	.LVL58:
+ 321:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   
+ 711              		.loc 1 321 0
+ 712 000a 8AB2     		uxth	r2, r1
+ 713              	.LVL59:
+ 714 000c 0849     		ldr	r1, .L48
+ 715              	.LVL60:
+ 716 000e 0968     		ldr	r1, [r1]
+ 717 0010 0291     		str	r1, [sp, #8]
+ 718 0012 0195     		str	r5, [sp, #4]
+ 719 0014 0093     		str	r3, [sp]
+ 720 0016 2300     		movs	r3, r4
+ 721              	.LVL61:
+ 722 0018 0100     		movs	r1, r0
+ 723 001a 0648     		ldr	r0, .L48+4
+ 724              	.LVL62:
+ 725 001c FFF7FEFF 		bl	HAL_I2C_Mem_Write
+ 726              	.LVL63:
+ 727 0020 041E     		subs	r4, r0, #0
+ 728              	.LVL64:
+ 324:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   {
+ 729              		.loc 1 324 0
+ 730 0022 02D1     		bne	.L47
+ 731              	.LVL65:
+ 732              	.L46:
+ 330:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c **** 
+ 733              		.loc 1 330 0
+ 734 0024 2000     		movs	r0, r4
+ 735 0026 05B0     		add	sp, sp, #20
+ 736              		@ sp needed
+ 737 0028 30BD     		pop	{r4, r5, pc}
+ 738              	.LVL66:
+ 739              	.L47:
+ 327:Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.c ****   }        
+ 740              		.loc 1 327 0
+ 741 002a FFF7FEFF 		bl	I2C1_Error
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 21
+
+
+ 742              	.LVL67:
+ 743 002e F9E7     		b	.L46
+ 744              	.L49:
+ 745              		.align	2
+ 746              	.L48:
+ 747 0030 00000000 		.word	.LANCHOR1
+ 748 0034 00000000 		.word	heval_I2c1
+ 749              		.cfi_endproc
+ 750              	.LFE44:
+ 752              		.comm	heval_I2c1,76,4
+ 753              		.global	I2c1Timeout
+ 754              		.global	LED_PIN
+ 755              		.global	LED_PORT
+ 756              		.section	.data.I2c1Timeout,"aw",%progbits
+ 757              		.align	2
+ 758              		.set	.LANCHOR1,. + 0
+ 761              	I2c1Timeout:
+ 762 0000 E8030000 		.word	1000
+ 763              		.section	.data.LED_PORT,"aw",%progbits
+ 764              		.align	2
+ 765              		.set	.LANCHOR0,. + 0
+ 768              	LED_PORT:
+ 769 0000 00040050 		.word	1342178304
+ 770              		.section	.rodata.LED_PIN,"a",%progbits
+ 771              		.align	2
+ 774              	LED_PIN:
+ 775 0000 0800     		.short	8
+ 776              		.text
+ 777              	.Letext0:
+ 778              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 779              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 780              		.file 4 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h"
+ 781              		.file 5 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h"
+ 782              		.file 6 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h"
+ 783              		.file 7 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h"
+ 784              		.file 8 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h"
+ 785              		.file 9 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h"
+ 786              		.file 10 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h"
+ 787              		.file 11 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
+ 788              		.file 12 "Drivers/BSP/STM32L0XX_Nucleo_32/stm32l0xx_nucleo_32.h"
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 22
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32l0xx_nucleo_32.c
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:16     .text.BSP_GetVersion:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:23     .text.BSP_GetVersion:00000000 BSP_GetVersion
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:38     .text.BSP_GetVersion:00000004 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:43     .text.BSP_LED_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:50     .text.BSP_LED_Init:00000000 BSP_LED_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:111    .text.BSP_LED_Init:00000040 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:117    .text.BSP_LED_On:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:124    .text.BSP_LED_On:00000000 BSP_LED_On
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:151    .text.BSP_LED_On:00000014 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:156    .text.BSP_LED_Off:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:163    .text.BSP_LED_Off:00000000 BSP_LED_Off
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:190    .text.BSP_LED_Off:00000014 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:195    .text.BSP_LED_Toggle:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:202    .text.BSP_LED_Toggle:00000000 BSP_LED_Toggle
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:228    .text.BSP_LED_Toggle:00000010 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:233    .text.I2C1_IsDeviceReady:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:240    .text.I2C1_IsDeviceReady:00000000 I2C1_IsDeviceReady
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:268    .text.I2C1_IsDeviceReady:00000014 $d
+                            *COM*:0000004c heval_I2c1
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:274    .text.I2C1_MspInit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:281    .text.I2C1_MspInit:00000000 I2C1_MspInit
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:362    .text.I2C1_MspInit:00000060 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:369    .text.I2C1_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:376    .text.I2C1_Init:00000000 I2C1_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:434    .text.I2C1_Init:00000038 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:441    .text.I2C1_Error:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:448    .text.I2C1_Error:00000000 I2C1_Error
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:472    .text.I2C1_Error:00000010 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:477    .text.I2C1_Write:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:484    .text.I2C1_Write:00000000 I2C1_Write
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:538    .text.I2C1_Write:00000030 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:543    .text.I2C1_Read:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:550    .text.I2C1_Read:00000000 I2C1_Read
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:608    .text.I2C1_Read:0000003c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:613    .text.I2C1_ReadBuffer:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:620    .text.I2C1_ReadBuffer:00000000 I2C1_ReadBuffer
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:677    .text.I2C1_ReadBuffer:00000030 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:683    .text.I2C1_WriteBuffer:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:690    .text.I2C1_WriteBuffer:00000000 I2C1_WriteBuffer
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:747    .text.I2C1_WriteBuffer:00000030 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:761    .data.I2c1Timeout:00000000 I2c1Timeout
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:774    .rodata.LED_PIN:00000000 LED_PIN
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:768    .data.LED_PORT:00000000 LED_PORT
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:757    .data.I2c1Timeout:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:764    .data.LED_PORT:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s:771    .rodata.LED_PIN:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_GPIO_WritePin
+HAL_GPIO_TogglePin
+HAL_I2C_IsDeviceReady
+HAL_RCCEx_PeriphCLKConfig
+HAL_I2C_GetState
+HAL_I2C_Init
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccsD5gur.s 			page 23
+
+
+HAL_I2C_DeInit
+HAL_I2C_Mem_Write
+HAL_I2C_Mem_Read

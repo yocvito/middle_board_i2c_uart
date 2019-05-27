@@ -1,0 +1,65 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "erase",
+            "type": "shell",
+            "command": "st-flash",
+            "windows": {
+                "args": [
+                    "-c",
+                    "swd",
+                    "ur",
+                    "-ME",
+                    "-hardrst",
+                    "-v"
+                ],
+                "options": {
+                    "shell": {
+                        "executable": "powershell.exe"
+                    }
+                },
+            },
+            "osx": {
+                "args": [
+                    "erase"
+                ]
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+
+            "problemMatcher": []
+        }, 
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "st-flash",
+            "windows": {
+                "args": [
+                    "-c",
+                    "swd",
+                    "ur",
+                    "-P",
+                    "${input:firmware}",
+                    "0x08000000",
+                    "-hardrst",
+                    "-v"
+                ]
+            }
+        },
+    ],
+    "inputs": [
+        {
+            "id": "firmware",
+            "description": "",
+            "type": "pickString",
+            "options": [
+                "build/I2C-TEST.bin"
+            ]
+        }
+    ]
+}
