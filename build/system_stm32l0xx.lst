@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
   31:Src/system_stm32l0xx.c ****   *                        opensource.org/licenses/BSD-3-Clause
   32:Src/system_stm32l0xx.c ****   *
   33:Src/system_stm32l0xx.c ****   ******************************************************************************
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 2
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 2
 
 
   34:Src/system_stm32l0xx.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
   88:Src/system_stm32l0xx.c ****   */
   89:Src/system_stm32l0xx.c **** 
   90:Src/system_stm32l0xx.c **** /** @addtogroup STM32L0xx_System_Private_Macros
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 3
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 3
 
 
   91:Src/system_stm32l0xx.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
   32 0000 104B     		ldr	r3, .L2
   33 0002 1968     		ldr	r1, [r3]
   34 0004 8022     		movs	r2, #128
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 4
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 4
 
 
   35 0006 5200     		lsls	r2, r2, #1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  162:Src/system_stm32l0xx.c ****   SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH */
   66              		.loc 1 162 0
   67 0038 074B     		ldr	r3, .L2+20
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 5
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 5
 
 
   68 003a 8022     		movs	r2, #128
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  190:Src/system_stm32l0xx.c ****   *         (*) HSI_VALUE is a constant defined in stm32l0xx_hal.h file (default value
  191:Src/system_stm32l0xx.c ****   *             16 MHz) but the real value may vary depending on the variations
  192:Src/system_stm32l0xx.c ****   *             in voltage and temperature.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 6
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 6
 
 
  193:Src/system_stm32l0xx.c ****   *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  224:Src/system_stm32l0xx.c ****         SystemCoreClock = HSI_VALUE;
  225:Src/system_stm32l0xx.c ****       }
  226:Src/system_stm32l0xx.c ****       break;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 7
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 7
 
 
  227:Src/system_stm32l0xx.c ****     case 0x08U:  /* HSE used as system clock */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  156 003c 121B     		subs	r2, r2, r4
  157 003e 9301     		lsls	r3, r2, #6
  158 0040 9B1A     		subs	r3, r3, r2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 8
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 8
 
 
  159 0042 DB00     		lsls	r3, r3, #3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  195 0072 1340     		ands	r3, r2
  196 0074 1A4A     		ldr	r2, .L15+12
  197 0076 D35C     		ldrb	r3, [r2, r3]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 9
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 9
 
 
  198              	.LVL19:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  243 00a4 121B     		subs	r2, r2, r4
  244 00a6 9301     		lsls	r3, r2, #6
  245 00a8 9B1A     		subs	r3, r3, r2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 10
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 10
 
 
  246 00aa DB00     		lsls	r3, r3, #3
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  304 0005 00       		.byte	0
  305 0006 00       		.byte	0
  306 0007 00       		.byte	0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 11
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 11
 
 
  307 0008 01       		.byte	1
@@ -641,25 +641,25 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 1
  348              		.file 5 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h"
  349              		.file 6 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h"
  350              		.file 7 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s 			page 12
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32l0xx.c
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:16     .text.SystemInit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:23     .text.SystemInit:00000000 SystemInit
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:77     .text.SystemInit:00000044 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:88     .text.SystemCoreClockUpdate:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:95     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:272    .text.SystemCoreClockUpdate:000000d4 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:333    .rodata.PLLMulTable:00000000 PLLMulTable
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:319    .rodata.APBPrescTable:00000000 APBPrescTable
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:298    .rodata.AHBPrescTable:00000000 AHBPrescTable
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:291    .data.SystemCoreClock:00000000 SystemCoreClock
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:287    .data.SystemCoreClock:00000000 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:294    .rodata.AHBPrescTable:00000000 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:316    .rodata.APBPrescTable:00000000 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccaaU94w.s:329    .rodata.PLLMulTable:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:16     .text.SystemInit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:23     .text.SystemInit:00000000 SystemInit
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:77     .text.SystemInit:00000044 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:88     .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:95     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:272    .text.SystemCoreClockUpdate:000000d4 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:333    .rodata.PLLMulTable:00000000 PLLMulTable
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:319    .rodata.APBPrescTable:00000000 APBPrescTable
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:298    .rodata.AHBPrescTable:00000000 AHBPrescTable
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:291    .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:287    .data.SystemCoreClock:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:294    .rodata.AHBPrescTable:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:316    .rodata.APBPrescTable:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccYhkprA.s:329    .rodata.PLLMulTable:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

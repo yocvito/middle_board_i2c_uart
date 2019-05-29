@@ -57,94 +57,23 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
-typedef struct {
-    void * const buffer;
-    uint16_t push_count;
-    uint16_t pop_count;
-    uint16_t const size;
-    uint16_t const element_size;
-} circ_gbuf_t;
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-//taille du buffer d'émission
-#define TXBUFFERSIZE 140
+#define TXBUFFERSIZE          140
 
 //si l'on utilise un ou plusieurs ports uart
-#define USE_MULTIPLE_UART 0
+#define USE_MULTIPLE_UART      0
 
 //mettre à zero si l'on veut faire des tests avec l'UART par exemple
-#define USE_I2C 1
+#define USE_I2C               1
 
-//nombre de port uart connectés
-#define MAX_UART_PORT 2
+//nombre de port uart connectés 
+#define MAX_UART_PORT         4
 
-#define I2C_ADDRESS 0x08
-
-// Macro Switches
-
-// uncomment to zero element space in XX_circ_gbuf_data after a pop.
-// #define CRICBUF_CLEAN_ON_POP
-
-/*!
- *  Define init macro
- */
-#define CIRC_GBUF_V_DEF(t,x,s)                 \
-    t x ## _circ_gbuf_data[s];                 \
-    circ_gbuf_t x = {                          \
-        .buffer = x ## _circ_gbuf_data,        \
-        .push_count = 0,                       \
-        .pop_count = 0,                        \
-        .size = s ,                            \
-        .element_size = sizeof(t)              \
-    };
-/*!
- *  define init macro + buffer manipulation macros
- */
-#define CIRC_GBUF_DEF(t,x,s)                   \
-    CIRC_GBUF_V_DEF(t,x,s)                     \
-    inline int x##_push_refd(t * pt)           \
-    {                                          \
-        return circ_gbuf_push(&x,pt);          \
-    }                                          \
-    inline int x##_pop_refd(t * pt)            \
-    {                                          \
-        return circ_gbuf_pop(&x,pt,0);         \
-    }                                          \
-    inline int x##_peek_refd(t * pt)           \
-    {                                          \
-        return circ_gbuf_pop(&x,pt,1);         \
-    }
-
-
-/*!
- *  Reset the buffer to 0
- */
-#define CIRC_GBUF_RESET(x)                     \
-    do {                                       \
-        x.push_count = 0;                      \
-        x.pop_count = 0;                       \
-    } while(0)
-
-/*!
- *  Push an element into the buffer
- */
-#define CIRC_GBUF_PUSH(x,y) x ## _push_refd(y)
-/*!
- *  Peek the last element of the buffer without delete it
- */
-#define CIRC_GBUF_PEEK(x,y) x ## _peek_refd(y)
-/*!
- *  Peek the last element of the buffer
- */
-#define CIRC_GBUF_POP(x,y) x ## _pop_refd(y)
-/*!
- *  Get the size of the free space
- */
-#define CIRC_GBUF_FS(x) circ_gbuf_free_space(&x)
+#define I2C_ADDRESS           0x08
 
 /* USER CODE END PD */
 
@@ -160,23 +89,25 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
-//Init circular buffer
-CIRC_GBUF_DEF(uint8_t, cbuf, 1024);
-
-uint8_t txBuff = 0;
-uint8_t rxBuff[2] = {NULL};
+uint8_t txBuff[TXBUFFERSIZE] = {0};
 
 #if USE_MULTIPLE_UART == 1
 uint8_t deveui_table[MAX_UART_PORT][8] = {0};
 #else
-uint8_t devEui[8] = {0};
+uint8_t devEui[8] = { 0 };
 #endif
 
 #if USE_MULTIPLE_UART == 1
 UART_HandleTypeDef *uart_table[MAX_UART_PORT] = {
-    0,
-    &huart2
+  0,
+  &huart2,
+  0,
+  0
 };
+#endif
+
+#if USE_I2C == 1
+uint8_t iTxData[TXBUFFERSIZE] = {0};
 #endif
 
 uint8_t uartPort = 2;
@@ -190,11 +121,15 @@ static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
-//Circular buffer functions
-int circ_gbuf_push(circ_gbuf_t *circ_gbuf, void *elem);
-int circ_gbuf_pop (circ_gbuf_t *circ_gbuf, void *elem, int read_only);
-int circ_gbuf_free_space(circ_gbuf_t *circ_gbuf);
+static bool isDevEui(char *str);
 
+static bool isEmptyDevEui();
+
+//char **str_split(char *a_str, const char a_delim);
+
+static void buildI2cFrame(char *payload);
+
+static void devEuiFormat(uint8_t *str_deveui);
 
 /* USER CODE END PFP */
 
@@ -239,9 +174,9 @@ int main(void)
 
   BSP_LED_Off(LED3);
 
+  uint8_t buff[2] = {0};
 
-
-  uint8_t cpybf[10] = {0};
+  bool endline = false;
 
   /* USER CODE END 2 */
 
@@ -250,27 +185,62 @@ int main(void)
   while (1)
   {
 
-    while (HAL_UART_GetState(&huart2) != 32)
-      {
-      }
-
-    if (HAL_UART_Receive_IT(&huart2, rxBuff, 1) == HAL_OK)
+#if USE_MULTIPLE_UART == 1
+    while (HAL_UART_Receive_IT(uart_table[uartPort-1], buff, 1) == HAL_OK)
+#else
+    while (HAL_UART_Receive_IT(&huart2, buff, 1) == HAL_OK)
+#endif
     {
-      
-      CIRC_GBUF_PUSH(cbuf,rxBuff[0]);
-
-      CIRC_GBUF_POP(cbuf,&txBuff);
-
-      if (HAL_I2C_Slave_Transmit_IT(&hi2c1, &txBuff, 1) != HAL_OK)
+      if (endline == false)
       {
-        BSP_LED_On(LED3);
+        if (buff[0] == '\r')
+        {
+          endline = true;
+
+          if( isEmptyDevEui() )
+          {
+            if(isDevEui(txBuff))
+            {
+#if USE_I2C == 1
+              //devEuiFormat(txBuff);
+#endif
+              BSP_LED_On(LED3);
+            }
+          }
+
+          if (strcmp(&txBuff[strlen(txBuff) - 11], "==== ######") == 0)
+            strcat((char *)txBuff, "\r\n\r\n");
+          else
+            strcat((char *)txBuff, "\r\n");
+
+#if USE_I2C == 1
+          //buildI2cFrame(txBuff);
+          HAL_I2C_Slave_Transmit_IT(&hi2c1, txBuff, strlen(txBuff)+1);
+          HAL_UART_Transmit_IT(&huart2, txBuff, strlen(txBuff));
+#else
+          HAL_UART_Transmit_IT(&huart2, txBuff, strlen(txBuff));
+#endif
+
+          txBuff[0] = '\0';
+        }
+        else
+        {
+          strcat(txBuff, buff);
+        }
+
       }
-
-      while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY)
+      else
       {
-      }    
+        endline = !endline;
+      }
     }
 
+#if USE_MULTIPLE_UART == 1
+    if(uartPort % MAX_UART_PORT == 0)
+      uartPort = 1;
+    else
+      uartPort++;
+#endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -306,8 +276,7 @@ void SystemClock_Config(void)
   }
   /**Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -317,7 +286,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_I2C1;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2 | RCC_PERIPHCLK_I2C1;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
   PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
@@ -343,7 +312,7 @@ static void MX_I2C1_Init(void)
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
   hi2c1.Init.Timing = 0x00100413;
-  hi2c1.Init.OwnAddress1 = 16;
+  hi2c1.Init.OwnAddress1 = I2C_ADDRESS<<1;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
@@ -372,7 +341,6 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
-
 }
 
 /**
@@ -407,7 +375,6 @@ static void MX_USART2_UART_Init(void)
   /* USER CODE BEGIN USART2_Init 2 */
 
   /* USER CODE END USART2_Init 2 */
-
 }
 
 /**
@@ -433,61 +400,82 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
 
 /*!
- *  @brief  Analyse des différents charactères des données de la trame pour reconnaitre ou non le DevEui
- *  @param  str      Données reçu par UART
+ *  Analyse des différents charactères des données de la trame pour reconnaitre ou non le DevEui
+ *  @param str      Données reçu par UART
  *  @retval boolean
  */
 static bool isDevEui(char *str)
 {
   bool ret = false;
-
-  if ((strlen(str) - 1) >= 37)
+  /*char **tab_eui = str_split(str, '-');
+  if (tab_eui)
   {
-    for (int i = 15, k = i + 2; i < 37; i++)
+    int i;
+    for (i = 0; i < 8; i++)
     {
-      if (k != i)
+      if (isxdigit(tab_eui[i][0]))
       {
-        if (isxdigit(str[i]))
+        if (isxdigit(tab_eui[i][1]))
+        {
+          ret = true;
+        }
+        else
+        {
+          ret = false;
+        }
+      }
+      else
+      {
+        ret = false;
+      }
+    }
+  }*/
+  if( (strlen(str)-1) >= 37)
+  {
+    for(int i=15, k=i+2; i<37 ; i++)
+    {
+      if( k != i )
+      {
+        if( isxdigit(str[i]) )
           ret = true;
         else
-          ret = false;
+          ret = false;    
       }
       else
       {
         k += 3;
-      }
+      }   
     }
   }
   return ret;
 }
 
 /*!
- *  @brief  Vérifie si le devEui n'est pas initialisé
+ *  Vérifie si le devEui n'est pas initialisé
  *  @retval boolean
  */
 static bool isEmptyDevEui()
 {
   bool ret = false;
-  for (int i = 0; i < 7; i++)
+  for(int i=0 ; i<7 ; i++)
   {
 #if USE_MULTIPLE_UART == 1
-    ret = (deveui_table[uartPort - 1][i] == 0) ? true : false;
+    ret = ( deveui_table[uartPort-1][i] == 0 ) ? true : false ;
 #else
-    ret = (devEui[i] == 0) ? true : false;
+    ret = ( devEui[i] == 0 ) ? true : false ;
 #endif
   }
   return ret;
 }
 
 /*!
- *  @brief  Permet de reconstituer le DevEui au format envoyer par i2c
- *  @param  str_deveui   chaine de charatère contenant le DevEui non formaté
+ *  Permet de reconstituer le DevEui au format envoyer par i2c
+ *  @param str_deveui   chaine de charatère contenant le DevEui non formaté
  *  @retval none
  */
 static void devEuiFormat(uint8_t *str_deveui)
@@ -496,28 +484,29 @@ static void devEuiFormat(uint8_t *str_deveui)
   int ibuff = 0;
   for (int i = 0, k = 0; i < strlen((char *)str_deveui); i++)
   {
-    if (i <= 15)
+    if(i <= 15)
       continue;
     if (str_deveui[i] != '-' && str_deveui[i + 1] != '-' && i != 37)
     {
       //on utilise un for au lieu d'une simple copie de valeur de str_deveui à buff car problème lors de la copie des valeurs de txBuff
-      for (int j = '0'; j <= 'F'; j++)
+      for(int j = '0' ; j <= 'F' ; j++)
       {
-        if (isxdigit(j))
+        if( isxdigit(j) )
         {
-          if (j == str_deveui[i])
+          if( j == str_deveui[i])
             buff[0] = j;
-          if (j == str_deveui[i + 1])
+          if( j == str_deveui[i+1])
             buff[1] = j;
         }
       }
       buff[2] = '\0';
-      //conversion en base 16 du buffer dans un entier
+      //conversion en base 16 du buffer dans un enier
       ibuff = (int)strtol(buff, NULL, 16);
 #if USE_MULTIPLE_UART == 1
       deveui_table[uartPort - 1][k] = ibuff;
 #else
       devEui[k] = ibuff;
+      HAL_UART_Transmit_IT(&huart2, ibuff, 4);
 #endif
       k++;
     }
@@ -528,15 +517,14 @@ static void devEuiFormat(uint8_t *str_deveui)
 
 #if USE_I2C == 1
 /*!
- *  @brief  Permet de formater la chaine selon le format suivant : 
+ *  Permet de formater la chaine selon le format suivant : 
  *    - i=0             i2c addr
  *    - i=1             uart port
  *    - i=2 à i=10      device unique id
  *    - i>10            payload
- *  @param  str_deveui   chaine de charatère contenant le DevEui non formaté
+ *  @param str_deveui   chaine de charatère contenant le DevEui non formaté
  *  @retval none
  */
-/*
 static void buildI2cFrame(char *payload)
 {
   //on remet la chaine à 0
@@ -568,88 +556,54 @@ static void buildI2cFrame(char *payload)
 
   strcat((char *)iTxData, payload);
 }
-*/
 #endif
-
-/*!
- * @brief   Permet de mettre une valeur dans le buffer circulaire
- * @param   circ_buf    circular buffer address
- * @param   elem        données à mettre dans le buffer circulaire
- * @retval  int         0 - Success
- *                     -1 - Out of space
- */
-int circ_gbuf_push(circ_gbuf_t *circ_buf, void *elem)
+/*
+char **str_split(char *a_str, const char a_delim)
 {
-    int total;
-    char *head;
+  char **result = 0;
+  size_t count = 0;
+  char *tmp = a_str;
+  char *last_delim = 0;
+  char delim[2];
+  delim[0] = a_delim;
+  delim[1] = 0;
 
-    total = circ_buf->push_count - circ_buf->pop_count;
-    if (total < 0)
-        total += (2 * circ_buf->size);
-
-    if (total >=  circ_buf->size)
-        return -1; // Full
-
-    head = circ_buf->buffer + ( (circ_buf->push_count % circ_buf->size)
-                                * circ_buf->element_size );
-    memcpy(head, elem, circ_buf->element_size);
-    circ_buf->push_count++;
-    if (circ_buf->push_count >= (2*circ_buf->size))
-        circ_buf->push_count = 0;
-    return 0;
-}
-
-/*!
- * @brief   Permet de récupérer la valeur à lire dans le buffer circulaire
- * @param   circ_buf    circular buffer address
- * @param   elem        variable pour acceuillir la valeur sortie
- * @retval  int         0 - Success
- *                     -1 - Empty
- */
-int circ_gbuf_pop(circ_gbuf_t *circ_buf, void *elem, int read_only)
-{
-    int total;
-    char *tail;
-
-    total = circ_buf->push_count - circ_buf->pop_count;
-    if (total < 0)
-        total += (2 * circ_buf->size);
-
-    if (total == 0)
-        return -1; // Empty
-
-    tail = circ_buf->buffer + ((circ_buf->pop_count % circ_buf->size)
-                                            * circ_buf->element_size);
-
-    if (elem)
-        memcpy(elem, tail, circ_buf->element_size);
-
-    if (!read_only) {
-#ifdef CRICBUF_CLEAN_ON_POP
-        memset(tail, 0, circ_buf->element_size);
-#endif
-        circ_buf->pop_count++;
-        if (circ_buf->pop_count >= (2*circ_buf->size))
-            circ_buf->pop_count = 0;
+   //Count how many elements will be extracted. 
+  while (*tmp)
+  {
+    if (a_delim == *tmp)
+    {
+      count++;
+      last_delim = tmp;
     }
-    return 0;
+    tmp++;
+  }
+
+   //Add space for trailing token. 
+  count += last_delim < (a_str + strlen(a_str) - 1);
+
+  // Add space for terminating null string so caller
+  // knows where the list of returned strings ends. 
+  count++;
+
+  result = malloc(sizeof(char *) * count);
+
+  if (result)
+  {
+    size_t idx = 0;
+    char *token = strtok(a_str, delim);
+
+    while (token)
+    {
+      *(result + idx++) = strdup(token);
+      token = strtok(0, delim);
+    }
+    *(result + idx) = 0;
+  }
+
+  return result;
 }
-
-/*!
- * @brief   Permet de récupérer la taille de l'espace libre dans le buffer circulaire
- * @param   circ_buf    circular buffer address
- * @retval  int         number of bytes available
- */
-int circ_gbuf_free_space(circ_gbuf_t *circ_buf)
-{
-    int total;
-
-    total = circ_buf->push_count - circ_buf->pop_count;
-    if (total < 0)
-        total += (2 * circ_buf->size);
-
-    return circ_buf->size - total;
-}
+*/
 
 /* USER CODE END 4 */
 
@@ -665,7 +619,7 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
@@ -674,7 +628,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
