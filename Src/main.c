@@ -51,7 +51,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdint.h>
-#include "circular-generic-buffer.h"
 
 /* USER CODE END Includes */
 
@@ -157,9 +156,9 @@ static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
 //Circular buffer functions
-int circ_gbuf_push(circ_gbuf_t *circ_gbuf, void *elem);
-int circ_gbuf_pop (circ_gbuf_t *circ_gbuf, void *elem, int read_only);
-int circ_gbuf_free_space(circ_gbuf_t *circ_gbuf);
+int circ_bbuf_push(circ_bbuf_t *c, uint8_t data);
+int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data);
+int circ_bbuf_free_space(circ_bbuf_t *c);
 
 
 /* USER CODE END PFP */
