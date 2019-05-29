@@ -51,6 +51,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdint.h>
+#include "circular-generic-buffer.h"
 
 /* USER CODE END Includes */
 
@@ -58,12 +59,11 @@
 /* USER CODE BEGIN PTD */
 
 typedef struct {
-    void * const buffer;
-    uint16_t push_count;
-    uint16_t pop_count;
-    uint16_t const size;
-    uint16_t const element_size;
-} circ_gbuf_t;
+    uint8_t * const buffer;
+    int head;
+    int tail;
+    const int maxlen;
+} circ_bbuf_t;
 
 /* USER CODE END PTD */
 
@@ -92,31 +92,13 @@ typedef struct {
 /*!
  *  Define init macro
  */
-#define CIRC_GBUF_V_DEF(t,x,s)                 \
-    t x ## _circ_gbuf_data[s];                 \
-    circ_gbuf_t x = {                          \
-        .buffer = x ## _circ_gbuf_data,        \
-        .push_count = 0,                       \
-        .pop_count = 0,                        \
-        .size = s ,                            \
-        .element_size = sizeof(t)              \
-    };
-/*!
- *  define init macro + buffer manipulation macros
- */
-#define CIRC_GBUF_DEF(t,x,s)                   \
-    CIRC_GBUF_V_DEF(t,x,s)                     \
-    inline int x##_push_refd(t * pt)           \
-    {                                          \
-        return circ_gbuf_push(&x,pt);          \
-    }                                          \
-    inline int x##_pop_refd(t * pt)            \
-    {                                          \
-        return circ_gbuf_pop(&x,pt,0);         \
-    }                                          \
-    inline int x##_peek_refd(t * pt)           \
-    {                                          \
-        return circ_gbuf_pop(&x,pt,1);         \
+#define CIRC_BBUF_DEF(x,y)                \
+    uint8_t x##_data_space[y+1];          \
+    circ_bbuf_t x = {                     \
+        .buffer = x##_data_space,         \
+        .head = 0,                        \
+        .tail = 0,                        \
+        .maxlen = y+1                     \
     }
 
 
@@ -125,26 +107,10 @@ typedef struct {
  */
 #define CIRC_GBUF_RESET(x)                     \
     do {                                       \
-        x.push_count = 0;                      \
-        x.pop_count = 0;                       \
+        x.head  = 0;                           \
+        x.tail = 0;                            \
     } while(0)
 
-/*!
- *  Push an element into the buffer
- */
-#define CIRC_GBUF_PUSH(x,y) x ## _push_refd(y)
-/*!
- *  Peek the last element of the buffer without delete it
- */
-#define CIRC_GBUF_PEEK(x,y) x ## _peek_refd(y)
-/*!
- *  Peek the last element of the buffer
- */
-#define CIRC_GBUF_POP(x,y) x ## _pop_refd(y)
-/*!
- *  Get the size of the free space
- */
-#define CIRC_GBUF_FS(x) circ_gbuf_free_space(&x)
 
 /* USER CODE END PD */
 
@@ -257,9 +223,9 @@ int main(void)
     if (HAL_UART_Receive_IT(&huart2, rxBuff, 1) == HAL_OK)
     {
       
-      CIRC_GBUF_PUSH(cbuf,rxBuff[0]);
+      circ_bbuf_push(&cbuf, rxBuff[0]);
 
-      CIRC_GBUF_POP(cbuf,&txBuff);
+      circ_bbuf_pop(&cbuf, &txBuff);
 
       if (HAL_I2C_Slave_Transmit_IT(&hi2c1, &txBuff, 1) != HAL_OK)
       {
@@ -573,82 +539,64 @@ static void buildI2cFrame(char *payload)
 
 /*!
  * @brief   Permet de mettre une valeur dans le buffer circulaire
- * @param   circ_buf    circular buffer address
- * @param   elem        données à mettre dans le buffer circulaire
+ * @param   c           circular buffer address
+ * @param   data        données à mettre dans le buffer circulaire
  * @retval  int         0 - Success
  *                     -1 - Out of space
  */
-int circ_gbuf_push(circ_gbuf_t *circ_buf, void *elem)
+int circ_bbuf_push(circ_bbuf_t *c, uint8_t data)
 {
-    int total;
-    char *head;
+    int next;
 
-    total = circ_buf->push_count - circ_buf->pop_count;
-    if (total < 0)
-        total += (2 * circ_buf->size);
+    next = c->head + 1;  // next is where head will point to after this write.
+    if (next >= c->maxlen)
+        next = 0;
 
-    if (total >=  circ_buf->size)
-        return -1; // Full
+    // if the head + 1 == tail, circular buffer is full. Notice that one slot
+    // is always left empty to differentiate empty vs full condition
+    if (next == c->tail)
+        return -1;
 
-    head = circ_buf->buffer + ( (circ_buf->push_count % circ_buf->size)
-                                * circ_buf->element_size );
-    memcpy(head, elem, circ_buf->element_size);
-    circ_buf->push_count++;
-    if (circ_buf->push_count >= (2*circ_buf->size))
-        circ_buf->push_count = 0;
-    return 0;
+    c->buffer[c->head] = data;  // Load data and then move
+    c->head = next;             // head to next data offset.
+    return 0;  // return success to indicate successful push.
 }
 
 /*!
  * @brief   Permet de récupérer la valeur à lire dans le buffer circulaire
- * @param   circ_buf    circular buffer address
- * @param   elem        variable pour acceuillir la valeur sortie
+ * @param   c           circular buffer address
+ * @param   data        variable pour acceuillir la valeur pop
  * @retval  int         0 - Success
  *                     -1 - Empty
  */
-int circ_gbuf_pop(circ_gbuf_t *circ_buf, void *elem, int read_only)
+int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data)
 {
-    int total;
-    char *tail;
+    int next;
 
-    total = circ_buf->push_count - circ_buf->pop_count;
-    if (total < 0)
-        total += (2 * circ_buf->size);
+    if (c->head == c->tail)  // if the head == tail, we don't have any data
+        return -1;
 
-    if (total == 0)
-        return -1; // Empty
+    next = c->tail + 1;  // next is where tail will point to after this read.
+    if(next >= c->maxlen)
+        next = 0;
 
-    tail = circ_buf->buffer + ((circ_buf->pop_count % circ_buf->size)
-                                            * circ_buf->element_size);
-
-    if (elem)
-        memcpy(elem, tail, circ_buf->element_size);
-
-    if (!read_only) {
-#ifdef CRICBUF_CLEAN_ON_POP
-        memset(tail, 0, circ_buf->element_size);
-#endif
-        circ_buf->pop_count++;
-        if (circ_buf->pop_count >= (2*circ_buf->size))
-            circ_buf->pop_count = 0;
-    }
-    return 0;
+    *data = c->buffer[c->tail];  // Read data and then move
+    c->tail = next;              // tail to next offset.
+    return 0;  // return success to indicate successful push.
 }
 
 /*!
  * @brief   Permet de récupérer la taille de l'espace libre dans le buffer circulaire
- * @param   circ_buf    circular buffer address
+ * @param   c           circular buffer address
  * @retval  int         number of bytes available
  */
-int circ_gbuf_free_space(circ_gbuf_t *circ_buf)
+int circ_bbuf_free_space(circ_bbuf_t *c)
 {
-    int total;
-
-    total = circ_buf->push_count - circ_buf->pop_count;
-    if (total < 0)
-        total += (2 * circ_buf->size);
-
-    return circ_buf->size - total;
+    int freeSpace;
+    freeSpace = c->tail - c->head;
+    if (freeSpace <= 0)
+        freeSpace += c->maxlen;
+    return freeSpace - 1; // -1 to account for the always-empty slot.
 }
 
 /* USER CODE END 4 */

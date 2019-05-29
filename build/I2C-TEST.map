@@ -1304,23 +1304,23 @@ LOAD c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gc
                 0x000004a0       0x1e c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m/crtn.o
 OUTPUT(build/I2C-TEST.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xec4d
- .debug_info    0x00000000     0x1f4a build/main.o
- .debug_info    0x00001f4a      0xaee build/stm32l0xx_it.o
- .debug_info    0x00002a38      0xf8a build/stm32l0xx_hal_msp.o
- .debug_info    0x000039c2     0x1027 build/stm32l0xx_nucleo_32.o
- .debug_info    0x000049e9     0x3ac7 build/stm32l0xx_hal_i2c.o
- .debug_info    0x000084b0      0x9c3 build/stm32l0xx_hal_i2c_ex.o
- .debug_info    0x00008e73     0x1d03 build/stm32l0xx_hal_uart.o
- .debug_info    0x0000ab76      0xa5b build/stm32l0xx_hal_uart_ex.o
- .debug_info    0x0000b5d1      0x8c3 build/stm32l0xx_hal.o
- .debug_info    0x0000be94      0xbb3 build/stm32l0xx_hal_rcc.o
- .debug_info    0x0000ca47      0x5e7 build/stm32l0xx_hal_rcc_ex.o
- .debug_info    0x0000d02e      0x757 build/stm32l0xx_hal_gpio.o
- .debug_info    0x0000d785      0x898 build/stm32l0xx_hal_dma.o
- .debug_info    0x0000e01d      0x82a build/stm32l0xx_hal_cortex.o
- .debug_info    0x0000e847      0x3e4 build/system_stm32l0xx.o
- .debug_info    0x0000ec2b       0x22 build/startup_stm32l011xx.o
+.debug_info     0x00000000     0xec53
+ .debug_info    0x00000000     0x1f50 build/main.o
+ .debug_info    0x00001f50      0xaee build/stm32l0xx_it.o
+ .debug_info    0x00002a3e      0xf8a build/stm32l0xx_hal_msp.o
+ .debug_info    0x000039c8     0x1027 build/stm32l0xx_nucleo_32.o
+ .debug_info    0x000049ef     0x3ac7 build/stm32l0xx_hal_i2c.o
+ .debug_info    0x000084b6      0x9c3 build/stm32l0xx_hal_i2c_ex.o
+ .debug_info    0x00008e79     0x1d03 build/stm32l0xx_hal_uart.o
+ .debug_info    0x0000ab7c      0xa5b build/stm32l0xx_hal_uart_ex.o
+ .debug_info    0x0000b5d7      0x8c3 build/stm32l0xx_hal.o
+ .debug_info    0x0000be9a      0xbb3 build/stm32l0xx_hal_rcc.o
+ .debug_info    0x0000ca4d      0x5e7 build/stm32l0xx_hal_rcc_ex.o
+ .debug_info    0x0000d034      0x757 build/stm32l0xx_hal_gpio.o
+ .debug_info    0x0000d78b      0x898 build/stm32l0xx_hal_dma.o
+ .debug_info    0x0000e023      0x82a build/stm32l0xx_hal_cortex.o
+ .debug_info    0x0000e84d      0x3e4 build/system_stm32l0xx.o
+ .debug_info    0x0000ec31       0x22 build/startup_stm32l011xx.o
 
 .debug_abbrev   0x00000000     0x20ec
  .debug_abbrev  0x00000000      0x368 build/main.o
@@ -1409,23 +1409,23 @@ OUTPUT(build/I2C-TEST.elf elf32-littlearm)
  .debug_ranges  0x00000950       0x18 build/system_stm32l0xx.o
  .debug_ranges  0x00000968       0x20 build/startup_stm32l011xx.o
 
-.debug_line     0x00000000     0x5128
- .debug_line    0x00000000      0x4a3 build/main.o
- .debug_line    0x000004a3      0x267 build/stm32l0xx_it.o
- .debug_line    0x0000070a      0x2be build/stm32l0xx_hal_msp.o
- .debug_line    0x000009c8      0x357 build/stm32l0xx_nucleo_32.o
- .debug_line    0x00000d1f     0x160d build/stm32l0xx_hal_i2c.o
- .debug_line    0x0000232c      0x335 build/stm32l0xx_hal_i2c_ex.o
- .debug_line    0x00002661      0xd8f build/stm32l0xx_hal_uart.o
- .debug_line    0x000033f0      0x37a build/stm32l0xx_hal_uart_ex.o
- .debug_line    0x0000376a      0x417 build/stm32l0xx_hal.o
- .debug_line    0x00003b81      0x4ce build/stm32l0xx_hal_rcc.o
- .debug_line    0x0000404f      0x3ab build/stm32l0xx_hal_rcc_ex.o
- .debug_line    0x000043fa      0x331 build/stm32l0xx_hal_gpio.o
- .debug_line    0x0000472b      0x41e build/stm32l0xx_hal_dma.o
- .debug_line    0x00004b49      0x351 build/stm32l0xx_hal_cortex.o
- .debug_line    0x00004e9a      0x202 build/system_stm32l0xx.o
- .debug_line    0x0000509c       0x8c build/startup_stm32l011xx.o
+.debug_line     0x00000000     0x512f
+ .debug_line    0x00000000      0x4aa build/main.o
+ .debug_line    0x000004aa      0x267 build/stm32l0xx_it.o
+ .debug_line    0x00000711      0x2be build/stm32l0xx_hal_msp.o
+ .debug_line    0x000009cf      0x357 build/stm32l0xx_nucleo_32.o
+ .debug_line    0x00000d26     0x160d build/stm32l0xx_hal_i2c.o
+ .debug_line    0x00002333      0x335 build/stm32l0xx_hal_i2c_ex.o
+ .debug_line    0x00002668      0xd8f build/stm32l0xx_hal_uart.o
+ .debug_line    0x000033f7      0x37a build/stm32l0xx_hal_uart_ex.o
+ .debug_line    0x00003771      0x417 build/stm32l0xx_hal.o
+ .debug_line    0x00003b88      0x4ce build/stm32l0xx_hal_rcc.o
+ .debug_line    0x00004056      0x3ab build/stm32l0xx_hal_rcc_ex.o
+ .debug_line    0x00004401      0x331 build/stm32l0xx_hal_gpio.o
+ .debug_line    0x00004732      0x41e build/stm32l0xx_hal_dma.o
+ .debug_line    0x00004b50      0x351 build/stm32l0xx_hal_cortex.o
+ .debug_line    0x00004ea1      0x202 build/system_stm32l0xx.o
+ .debug_line    0x000050a3       0x8c build/startup_stm32l011xx.o
 
 .debug_str      0x00000000     0x30eb
  .debug_str     0x00000000     0x110a build/main.o
@@ -1479,27 +1479,27 @@ OUTPUT(build/I2C-TEST.elf elf32-littlearm)
  .comment       0x0000007e       0x7f build/stm32l0xx_hal_cortex.o
  .comment       0x0000007e       0x7f build/system_stm32l0xx.o
 
-.debug_frame    0x00000000     0x1d10
- .debug_frame   0x00000000      0x10c build/main.o
- .debug_frame   0x0000010c       0xa4 build/stm32l0xx_it.o
- .debug_frame   0x000001b0       0x9c build/stm32l0xx_hal_msp.o
- .debug_frame   0x0000024c      0x17c build/stm32l0xx_nucleo_32.o
- .debug_frame   0x000003c8      0x950 build/stm32l0xx_hal_i2c.o
- .debug_frame   0x00000d18       0xb8 build/stm32l0xx_hal_i2c_ex.o
- .debug_frame   0x00000dd0      0x604 build/stm32l0xx_hal_uart.o
- .debug_frame   0x000013d4      0x108 build/stm32l0xx_hal_uart_ex.o
- .debug_frame   0x000014dc      0x204 build/stm32l0xx_hal.o
- .debug_frame   0x000016e0      0x12c build/stm32l0xx_hal_rcc.o
- .debug_frame   0x0000180c       0xb8 build/stm32l0xx_hal_rcc_ex.o
- .debug_frame   0x000018c4       0xd8 build/stm32l0xx_hal_gpio.o
- .debug_frame   0x0000199c      0x17c build/stm32l0xx_hal_dma.o
- .debug_frame   0x00001b18       0xec build/stm32l0xx_hal_cortex.o
- .debug_frame   0x00001c04       0x3c build/system_stm32l0xx.o
- .debug_frame   0x00001c40       0x2c c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00001c6c       0x28 c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00001c94       0x20 c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x00001cb4       0x20 c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00001cd4       0x3c c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivmoddi4.o)
+.debug_frame    0x00000000     0x1d0c
+ .debug_frame   0x00000000      0x108 build/main.o
+ .debug_frame   0x00000108       0xa4 build/stm32l0xx_it.o
+ .debug_frame   0x000001ac       0x9c build/stm32l0xx_hal_msp.o
+ .debug_frame   0x00000248      0x17c build/stm32l0xx_nucleo_32.o
+ .debug_frame   0x000003c4      0x950 build/stm32l0xx_hal_i2c.o
+ .debug_frame   0x00000d14       0xb8 build/stm32l0xx_hal_i2c_ex.o
+ .debug_frame   0x00000dcc      0x604 build/stm32l0xx_hal_uart.o
+ .debug_frame   0x000013d0      0x108 build/stm32l0xx_hal_uart_ex.o
+ .debug_frame   0x000014d8      0x204 build/stm32l0xx_hal.o
+ .debug_frame   0x000016dc      0x12c build/stm32l0xx_hal_rcc.o
+ .debug_frame   0x00001808       0xb8 build/stm32l0xx_hal_rcc_ex.o
+ .debug_frame   0x000018c0       0xd8 build/stm32l0xx_hal_gpio.o
+ .debug_frame   0x00001998      0x17c build/stm32l0xx_hal_dma.o
+ .debug_frame   0x00001b14       0xec build/stm32l0xx_hal_cortex.o
+ .debug_frame   0x00001c00       0x3c build/system_stm32l0xx.o
+ .debug_frame   0x00001c3c       0x2c c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00001c68       0x28 c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001c90       0x20 c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001cb0       0x20 c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001cd0       0x3c c:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v6-m\libgcc.a(_udivmoddi4.o)
 
 Cross Reference Table
 
