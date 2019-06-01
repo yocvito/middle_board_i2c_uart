@@ -57,11 +57,12 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
-typedef struct {
-    uint8_t * const buffer;
-    int head;
-    int tail;
-    const int maxlen;
+typedef struct
+{
+  uint8_t *const buffer;
+  int head;
+  int tail;
+  const int maxlen;
 } circ_bbuf_t;
 
 /* USER CODE END PTD */
@@ -71,6 +72,9 @@ typedef struct {
 
 //taille du buffer d'émission
 #define TXBUFFERSIZE 140
+
+//taille buffer circulaire
+#define CIRC_BUFFER_MAX_SIZE    1024
 
 //si l'on utilise un ou plusieurs ports uart
 #define USE_MULTIPLE_UART 0
@@ -89,27 +93,27 @@ typedef struct {
 // #define CRICBUF_CLEAN_ON_POP
 
 /*!
- *  Define init macro
+ * @brief   Define init macro
+ * @param   x   circular buffer label
+ * @param   y   circulaire buffer size
  */
-#define CIRC_BBUF_DEF(x,y)                \
-    uint8_t x##_data_space[y+1];          \
-    circ_bbuf_t x = {                     \
-        .buffer = x##_data_space,         \
-        .head = 0,                        \
-        .tail = 0,                        \
-        .maxlen = y+1                     \
-    }
-
+#define CIRC_BBUF_DEF(x, y)      \
+  uint8_t x##_data_space[y + 1]; \
+  circ_bbuf_t x = {              \
+      .buffer = x##_data_space,  \
+      .head = 0,                 \
+      .tail = 0,                 \
+      .maxlen = y + 1}
 
 /*!
  *  Reset the buffer to 0
  */
-#define CIRC_GBUF_RESET(x)                     \
-    do {                                       \
-        x.head  = 0;                           \
-        x.tail = 0;                            \
-    } while(0)
-
+#define CIRC_GBUF_RESET(x) \
+  do                       \
+  {                        \
+    x.head = 0;            \
+    x.tail = 0;            \
+  } while (0)
 
 /* USER CODE END PD */
 
@@ -126,7 +130,7 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 
 //Init circular buffer
-CIRC_GBUF_DEF(uint8_t, cbuf, 1024);
+CIRC_BBUF_DEF(cbuf, CIRC_BUFFER_MAX_SIZE);
 
 uint8_t txBuff = 0;
 uint8_t rxBuff[2] = {NULL};
@@ -140,8 +144,7 @@ uint8_t devEui[8] = {0};
 #if USE_MULTIPLE_UART == 1
 UART_HandleTypeDef *uart_table[MAX_UART_PORT] = {
     0,
-    &huart2
-};
+    &huart2};
 #endif
 
 uint8_t uartPort = 2;
@@ -155,11 +158,12 @@ static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
+
+
 //Circular buffer functions
 int circ_bbuf_push(circ_bbuf_t *c, uint8_t data);
 int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data);
 int circ_bbuf_free_space(circ_bbuf_t *c);
-
 
 /* USER CODE END PFP */
 
@@ -204,9 +208,11 @@ int main(void)
 
   BSP_LED_Off(LED3);
 
-
-
   uint8_t cpybf[10] = {0};
+
+  bool first = true;
+
+  HAL_UART_Receive_IT(&huart2, &txBuff, 1);
 
   /* USER CODE END 2 */
 
@@ -215,27 +221,17 @@ int main(void)
   while (1)
   {
 
-    while (HAL_UART_GetState(&huart2) != 32)
-      {
-      }
-
-    if (HAL_UART_Receive_IT(&huart2, rxBuff, 1) == HAL_OK)
+    if(circ_bbuf_pop(&cbuf, &txBuff) != -1)
     {
-      
-      circ_bbuf_push(&cbuf, rxBuff[0]);
-
-      circ_bbuf_pop(&cbuf, &txBuff);
-
       if (HAL_I2C_Slave_Transmit_IT(&hi2c1, &txBuff, 1) != HAL_OK)
       {
         BSP_LED_On(LED3);
       }
-
+      
       while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY)
       {
-      }    
+      }
     }
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -356,7 +352,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 96000;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -545,20 +541,20 @@ static void buildI2cFrame(char *payload)
  */
 int circ_bbuf_push(circ_bbuf_t *c, uint8_t data)
 {
-    int next;
+  int next;
 
-    next = c->head + 1;  // next is where head will point to after this write.
-    if (next >= c->maxlen)
-        next = 0;
+  next = c->head + 1; // next is where head will point to after this write.
+  if (next >= c->maxlen)
+    next = 0;
 
-    // if the head + 1 == tail, circular buffer is full. Notice that one slot
-    // is always left empty to differentiate empty vs full condition
-    if (next == c->tail)
-        return -1;
+  // if the head + 1 == tail, circular buffer is full. Notice that one slot
+  // is always left empty to differentiate empty vs full condition
+  if (next == c->tail)
+    return -1;
 
-    c->buffer[c->head] = data;  // Load data and then move
-    c->head = next;             // head to next data offset.
-    return 0;  // return success to indicate successful push.
+  c->buffer[c->head] = data; // Load data and then move
+  c->head = next;            // head to next data offset.
+  return 0;                  // return success to indicate successful push.
 }
 
 /*!
@@ -570,18 +566,18 @@ int circ_bbuf_push(circ_bbuf_t *c, uint8_t data)
  */
 int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data)
 {
-    int next;
+  int next;
 
-    if (c->head == c->tail)  // if the head == tail, we don't have any data
-        return -1;
+  if (c->head == c->tail) // if the head == tail, we don't have any data
+    return -1;
 
-    next = c->tail + 1;  // next is where tail will point to after this read.
-    if(next >= c->maxlen)
-        next = 0;
+  next = c->tail + 1; // next is where tail will point to after this read.
+  if (next >= c->maxlen)
+    next = 0;
 
-    *data = c->buffer[c->tail];  // Read data and then move
-    c->tail = next;              // tail to next offset.
-    return 0;  // return success to indicate successful push.
+  *data = c->buffer[c->tail]; // Read data and then move
+  c->tail = next;             // tail to next offset.
+  return 0;                   // return success to indicate successful push.
 }
 
 /*!
@@ -591,11 +587,25 @@ int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data)
  */
 int circ_bbuf_free_space(circ_bbuf_t *c)
 {
-    int freeSpace;
-    freeSpace = c->tail - c->head;
-    if (freeSpace <= 0)
-        freeSpace += c->maxlen;
-    return freeSpace - 1; // -1 to account for the always-empty slot.
+  int freeSpace;
+  freeSpace = c->tail - c->head;
+  if (freeSpace <= 0)
+    freeSpace += c->maxlen;
+  return freeSpace - 1; // -1 to account for the always-empty slot.
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if(HAL_UART_Receive_IT(&huart2, &txBuff, 1) == HAL_OK)
+  {
+    circ_bbuf_push(&cbuf, txBuff);
+  }
+
+  while ( HAL_UART_GetState(&huart2) != HAL_UART_STATE_READY)
+  {
+  }
+  
+  
 }
 
 /* USER CODE END 4 */
