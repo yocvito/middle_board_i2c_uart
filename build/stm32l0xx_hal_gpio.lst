@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
   31:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   type and the IO speed can be selected depending on the VDD value.
   32:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
   33:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (+) The microcontroller IO pins are connected to onboard peripherals/modules through a 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 2
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 2
 
 
   34:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         multiplexer that allows only one peripheral alternate function (AF) connected 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
   88:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         (PC14 and PC15, respectively) when the LSE oscillator is off. The LSE has 
   89:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         priority over the GPIO function.
   90:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 3
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 3
 
 
   91:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****     (#) The HSE oscillator pins OSC_IN/OSC_OUT can be used as 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  145:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
  146:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** 
  147:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** /** @addtogroup GPIO_Exported_Functions_Group1
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 4
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 4
 
 
  148:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****  *  @brief    Initialization and de-initialization functions
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
   48 0008 78E0     		b	.L2
   49              	.LVL2:
   50              	.L6:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 5
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 5
 
 
  180:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
   70              		.loc 1 214 0
   71 001e 4568     		ldr	r5, [r0, #4]
   72              	.LVL8:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 6
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 6
 
 
  215:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         temp &= ~(GPIO_OTYPER_OT_0 << position) ;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  229:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       temp |= ((GPIO_Init->Pull) << (position * 2U)); 
  113              		.loc 1 229 0
  114 004c 8C68     		ldr	r4, [r1, #8]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 7
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 7
 
 
  115 004e B440     		lsls	r4, r4, r6
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  157 0088 384E     		ldr	r6, .L19+12
  158 008a B042     		cmp	r0, r6
  159 008c 5FD0     		beq	.L17
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 8
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 8
 
 
  160              		.loc 1 241 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  201 00be 2640     		ands	r6, r4
  202              	.LVL27:
  255:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         if((GPIO_Init->Mode & GPIO_MODE_EVT) == GPIO_MODE_EVT)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 9
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 9
 
 
  203              		.loc 1 255 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  241              	.LVL33:
  272:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****         if((GPIO_Init->Mode & FALLING_EDGE) == FALLING_EDGE)
  242              		.loc 1 272 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 10
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 10
 
 
  243 00ea 4A68     		ldr	r2, [r1, #4]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  284 011a 0835     		adds	r5, r5, #8
  285 011c AD00     		lsls	r5, r5, #2
  286 011e 2F58     		ldr	r7, [r5, r0]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 11
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 11
 
 
  287              	.LVL38:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  334 0156 0126     		movs	r6, #1
  335 0158 9AE7     		b	.L8
  336              	.LVL44:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 12
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 12
 
 
  337              	.L18:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  379 0006 4646     		mov	r6, r8
  380 0008 C0B5     		push	{r6, r7, lr}
  381              	.LCFI3:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 13
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 13
 
 
  382              		.cfi_def_cfa_offset 32
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  399              		.loc 1 330 0 is_stmt 0 discriminator 12
  400 0014 9640     		lsls	r6, r6, r2
  401 0016 A642     		cmp	r6, r4
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 14
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 14
 
 
  402 0018 45D0     		beq	.L29
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  437 0046 3C58     		ldr	r4, [r7, r0]
  438 0048 A146     		mov	r9, r4
  439 004a 0726     		movs	r6, #7
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 15
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 15
 
 
  440 004c 1E40     		ands	r6, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  330:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****       {
  487              		.loc 1 330 0 discriminator 3
  488 0098 124E     		ldr	r6, .L32+8
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 16
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 16
 
 
  489 009a B042     		cmp	r0, r6
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  535              	.L33:
  536              		.align	2
  537              	.L32:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 17
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 17
 
 
  538 00dc 00000140 		.word	1073807360
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  380:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   if((GPIOx->IDR & GPIO_Pin) != (uint32_t)GPIO_PIN_RESET)
  561              		.loc 1 380 0
  562 0000 0369     		ldr	r3, [r0, #16]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 18
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 18
 
 
  563 0002 0B42     		tst	r3, r1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  408:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   */
  409:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState)
  410:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 19
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 19
 
 
  591              		.loc 1 410 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  434:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c **** {
  623              		.loc 1 434 0
  624              		.cfi_startproc
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 20
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 20
 
 
  625              		@ args = 0, pretend = 0, frame = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  659              		.loc 1 456 0
  660 0002 8022     		movs	r2, #128
  661 0004 5202     		lsls	r2, r2, #9
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 21
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 21
 
 
  662 0006 0192     		str	r2, [sp, #4]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  474:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c ****   }
  692              		.loc 1 474 0
  693 0028 0020     		movs	r0, #0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 22
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 22
 
 
  694              	.LVL66:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  722              		.align	1
  723              		.global	HAL_GPIO_EXTI_IRQHandler
  724              		.syntax unified
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 23
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 23
 
 
  725              		.code	16
@@ -1378,32 +1378,32 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 1
  775              		.file 7 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h"
  776              		.file 8 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h"
  777              		.file 9 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 24
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 24
 
 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s 			page 25
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l0xx_hal_gpio.c
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:16     .text.HAL_GPIO_Init:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:23     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:346    .text.HAL_GPIO_Init:00000160 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:355    .text.HAL_GPIO_DeInit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:362    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:538    .text.HAL_GPIO_DeInit:000000dc $d
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:546    .text.HAL_GPIO_ReadPin:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:553    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:582    .text.HAL_GPIO_WritePin:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:589    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:614    .text.HAL_GPIO_TogglePin:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:621    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:641    .text.HAL_GPIO_LockPin:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:648    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:700    .text.HAL_GPIO_EXTI_Callback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:707    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:722    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:729    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
-C:\Users\Nicolas\AppData\Local\Temp\ccqiiUpL.s:764    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:16     .text.HAL_GPIO_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:23     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:346    .text.HAL_GPIO_Init:00000160 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:355    .text.HAL_GPIO_DeInit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:362    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:538    .text.HAL_GPIO_DeInit:000000dc $d
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:546    .text.HAL_GPIO_ReadPin:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:553    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:582    .text.HAL_GPIO_WritePin:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:589    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:614    .text.HAL_GPIO_TogglePin:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:621    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:641    .text.HAL_GPIO_LockPin:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:648    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:700    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:707    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:722    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:729    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+C:\Users\Nicolas\AppData\Local\Temp\ccgwQdeR.s:764    .text.HAL_GPIO_EXTI_IRQHandler:00000018 $d
 
 NO UNDEFINED SYMBOLS

@@ -70,20 +70,18 @@ typedef struct
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-//taille du buffer d'émission
-#define TXBUFFERSIZE 140
-
-//taille buffer circulaire
-#define CIRC_BUFFER_MAX_SIZE    1024
-
 //si l'on utilise un ou plusieurs ports uart
 #define USE_MULTIPLE_UART 0
 
-//mettre à zero si l'on veut faire des tests avec l'UART par exemple
-#define USE_I2C 1
-
 //nombre de port uart connectés
 #define MAX_UART_PORT 2
+
+//taille buffer circulaire
+#if USE_MULTIPLE_UART == 1
+#define CIRC_BUFFER_MAX_SIZE    (1024 / MAX_UART_PORT)
+#else
+#define CIRC_BUFFER_MAX_SIZE    1024
+#endif
 
 #define I2C_ADDRESS 0x08
 
@@ -108,7 +106,7 @@ typedef struct
 /*!
  *  Reset the buffer to 0
  */
-#define CIRC_GBUF_RESET(x) \
+#define CIRC_BBUF_RESET(x) \
   do                       \
   {                        \
     x.head = 0;            \
@@ -130,21 +128,31 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 
 //Init circular buffer
+#if USE_MULTIPLE_UART == 1
+CIRC_BBUF_DEF(cbuf1, CIRC_BUFFER_MAX_SIZE);    // un buffer circulaire pour chaque port uart
+CIRC_BBUF_DEF(cbuf2, CIRC_BUFFER_MAX_SIZE);
+#else
 CIRC_BBUF_DEF(cbuf, CIRC_BUFFER_MAX_SIZE);
-
-uint8_t txBuff = 0;
-uint8_t rxBuff[2] = {NULL};
+#endif
 
 #if USE_MULTIPLE_UART == 1
-uint8_t deveui_table[MAX_UART_PORT][8] = {0};
+uint8_t rxBuff1 = 0;
+uint8_t rxBuff2 = 0;
 #else
-uint8_t devEui[8] = {0};
+uint8_t rxBuff = 0;
 #endif
+
 
 #if USE_MULTIPLE_UART == 1
 UART_HandleTypeDef *uart_table[MAX_UART_PORT] = {
     0,
     &huart2};
+
+circ_bbuf_t *bbuf_table[MAX_UART_PORT] = {
+  &cbuf1,
+  &cbuf2
+};
+
 #endif
 
 uint8_t uartPort = 2;
@@ -207,31 +215,49 @@ int main(void)
   BSP_LED_Init(LED3);
 
   BSP_LED_Off(LED3);
+  
+  uint8_t bf = 0;
 
-  uint8_t cpybf[10] = {0};
-
-  bool first = true;
-
-  HAL_UART_Receive_IT(&huart2, &txBuff, 1);
-
+#if USE_MULTIPLE_UART == 1
+  HAL_UART_Receive_IT(&lphuart1, &rxBuff1, 1);
+  HAL_UART_Receive_IT(&huart2, &rxBuff2, 1);
+  /*mettre toutes les fonctions d'interupt*/
+#else
+  HAL_UART_Receive_IT(&huart2, &rxBuff, 1);
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+#if USE_MULTIPLE_UART == 1
+      if(circ_bbuf_pop(bbuf_table[uartPort-1], &bf) != -1)
+#else
+      if(circ_bbuf_pop(&cbuf, &bf) != -1)
+#endif
+      {
+#if USE_MULTIPLE_UART == 1
+        if(bf == '\r')
+        {
+          if(uartPort == 4)
+          {
+            uartPort = 1;
+          }
+          else
+          {
+            uartPort++;
+          }
+        }
+#endif    
 
-    if(circ_bbuf_pop(&cbuf, &txBuff) != -1)
-    {
-      if (HAL_I2C_Slave_Transmit_IT(&hi2c1, &txBuff, 1) != HAL_OK)
-      {
-        BSP_LED_On(LED3);
+        if (HAL_I2C_Slave_Transmit(&hi2c1, &bf, 1, 0xFF) != HAL_OK)
+        {
+          BSP_LED_On(LED3);
+        }
+
       }
-      
-      while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY)
-      {
-      }
-    }
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -303,7 +329,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x00100413;
+  hi2c1.Init.Timing = 0x00100713;
   hi2c1.Init.OwnAddress1 = 16;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -352,7 +378,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 96000;
+  huart2.Init.BaudRate = 115200 ;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -398,139 +424,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-/*!
- *  @brief  Analyse des différents charactères des données de la trame pour reconnaitre ou non le DevEui
- *  @param  str      Données reçu par UART
- *  @retval boolean
- */
-static bool isDevEui(char *str)
-{
-  bool ret = false;
-
-  if ((strlen(str) - 1) >= 37)
-  {
-    for (int i = 15, k = i + 2; i < 37; i++)
-    {
-      if (k != i)
-      {
-        if (isxdigit(str[i]))
-          ret = true;
-        else
-          ret = false;
-      }
-      else
-      {
-        k += 3;
-      }
-    }
-  }
-  return ret;
-}
-
-/*!
- *  @brief  Vérifie si le devEui n'est pas initialisé
- *  @retval boolean
- */
-static bool isEmptyDevEui()
-{
-  bool ret = false;
-  for (int i = 0; i < 7; i++)
-  {
-#if USE_MULTIPLE_UART == 1
-    ret = (deveui_table[uartPort - 1][i] == 0) ? true : false;
-#else
-    ret = (devEui[i] == 0) ? true : false;
-#endif
-  }
-  return ret;
-}
-
-/*!
- *  @brief  Permet de reconstituer le DevEui au format envoyer par i2c
- *  @param  str_deveui   chaine de charatère contenant le DevEui non formaté
- *  @retval none
- */
-static void devEuiFormat(uint8_t *str_deveui)
-{
-  char buff[3];
-  int ibuff = 0;
-  for (int i = 0, k = 0; i < strlen((char *)str_deveui); i++)
-  {
-    if (i <= 15)
-      continue;
-    if (str_deveui[i] != '-' && str_deveui[i + 1] != '-' && i != 37)
-    {
-      //on utilise un for au lieu d'une simple copie de valeur de str_deveui à buff car problème lors de la copie des valeurs de txBuff
-      for (int j = '0'; j <= 'F'; j++)
-      {
-        if (isxdigit(j))
-        {
-          if (j == str_deveui[i])
-            buff[0] = j;
-          if (j == str_deveui[i + 1])
-            buff[1] = j;
-        }
-      }
-      buff[2] = '\0';
-      //conversion en base 16 du buffer dans un entier
-      ibuff = (int)strtol(buff, NULL, 16);
-#if USE_MULTIPLE_UART == 1
-      deveui_table[uartPort - 1][k] = ibuff;
-#else
-      devEui[k] = ibuff;
-#endif
-      k++;
-    }
-    if (i == 37)
-      break;
-  }
-}
-
-#if USE_I2C == 1
-/*!
- *  @brief  Permet de formater la chaine selon le format suivant : 
- *    - i=0             i2c addr
- *    - i=1             uart port
- *    - i=2 à i=10      device unique id
- *    - i>10            payload
- *  @param  str_deveui   chaine de charatère contenant le DevEui non formaté
- *  @retval none
- */
-/*
-static void buildI2cFrame(char *payload)
-{
-  //on remet la chaine à 0
-  iTxData[0] = '\0';
-  for (int i = 0, k = 0; i < 10; i++)
-  {
-    //i2c addr
-    if (i == 0)
-    {
-      iTxData[i] = I2C_ADDRESS;
-    }
-    //uart port
-    else if (i == 1)
-    {
-      iTxData[i] = uartPort;
-    }
-    //DevEui
-    else
-    {
-#if USE_MULTIPLE_UART == 1
-      iTxData[i] = deveui_table[uartPort - 1][k];
-#else
-      iTxData[i] = devEui[k];
-#endif
-      k++;
-    }
-  }
-  iTxData[10] = '\0';
-
-  strcat((char *)iTxData, payload);
-}
-*/
-#endif
 
 /*!
  * @brief   Permet de mettre une valeur dans le buffer circulaire
@@ -596,16 +489,25 @@ int circ_bbuf_free_space(circ_bbuf_t *c)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  if(HAL_UART_Receive_IT(&huart2, &txBuff, 1) == HAL_OK)
+/*if ( circ_bbuf_free_space(&cbuf) > 0)
   {
-    circ_bbuf_push(&cbuf, txBuff);
-  }
 
-  while ( HAL_UART_GetState(&huart2) != HAL_UART_STATE_READY)
-  {
-  }
-  
-  
+#if USE_MULTIPLE_UART == 1
+    if(HAL_UART_Receive_IT(uart_table[uartPort-1], &rxBuff, 1) == HAL_OK)
+#else
+    if(HAL_UART_Receive_IT(&huart2, &rxBuff, 1) == HAL_OK)
+#endif
+    {
+
+#if USE_MULTIPLE_UART == 1
+      circ_bbuf_push(bbuf_table[uartPort-1], rxBuff);
+#else
+ */circ_bbuf_push(&cbuf, rxBuff);
+/*#endif
+    }
+
+  } */
+  HAL_UART_Receive_IT(&huart2, &rxBuff, 1);
 }
 
 /* USER CODE END 4 */
