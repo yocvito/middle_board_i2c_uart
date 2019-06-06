@@ -238,7 +238,7 @@ int main(void)
 #endif
       {
 #if USE_MULTIPLE_UART == 1
-        if(bf == '\r')
+        if(bf == '\n')
         {
           if(uartPort == 4)
           {
@@ -489,25 +489,21 @@ int circ_bbuf_free_space(circ_bbuf_t *c)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-/*if ( circ_bbuf_free_space(&cbuf) > 0)
+#if USE_MULTIPLE_UART == 1
+  if(uartPort == 1)
   {
-
-#if USE_MULTIPLE_UART == 1
-    if(HAL_UART_Receive_IT(uart_table[uartPort-1], &rxBuff, 1) == HAL_OK)
+    circ_bbuf_push(&cbuf1, rxBuff1);
+    HAL_UART_Receive_IT(&lphuart1, &rxBuff1, 1);
+  }
+  else if(uartPort == 2)
+  {
+    circ_bbuf_push(&cbuf2, rxBuff2);
+    HAL_UART_Receive_IT(&huart2, &rxBuff2, 1);   
+  }
 #else
-    if(HAL_UART_Receive_IT(&huart2, &rxBuff, 1) == HAL_OK)
-#endif
-    {
-
-#if USE_MULTIPLE_UART == 1
-      circ_bbuf_push(bbuf_table[uartPort-1], rxBuff);
-#else
- */circ_bbuf_push(&cbuf, rxBuff);
-/*#endif
-    }
-
-  } */
+  circ_bbuf_push(&cbuf, rxBuff);
   HAL_UART_Receive_IT(&huart2, &rxBuff, 1);
+#endif
 }
 
 /* USER CODE END 4 */
