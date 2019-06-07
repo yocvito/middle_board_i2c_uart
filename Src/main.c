@@ -57,7 +57,10 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
-typedef struct
+/*!
+ *  Structure définissant le buffer circulaire  
+ */
+typedef struct circ_bbuf_t
 {
   uint8_t *const buffer;
   int head;
@@ -70,30 +73,34 @@ typedef struct
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-//si l'on utilise un ou plusieurs ports uart
+/*!
+ *  1 pour usage multi uart sinon 0
+ */
 #define USE_MULTIPLE_UART 0
 
-//nombre de port uart connectés
+/*!
+ *  Nombres de ports uart connectés
+ */
 #define MAX_UART_PORT 2
 
-//taille buffer circulaire
+/*!
+ *  Taille des|du buffer(s) circulaire(s)
+ */
 #if USE_MULTIPLE_UART == 1
-#define CIRC_BUFFER_MAX_SIZE    (1024 / MAX_UART_PORT)
+#define CIRC_BUFFER_MAX_SIZE    512     // (1024 / MAX_UART_PORT)
 #else
 #define CIRC_BUFFER_MAX_SIZE    1024
 #endif
 
+/*!
+ *  Adresse i2c de la middle board (inutile)
+ */
 #define I2C_ADDRESS 0x08
 
-// Macro Switches
-
-// uncomment to zero element space in XX_circ_gbuf_data after a pop.
-// #define CRICBUF_CLEAN_ON_POP
-
 /*!
- * @brief   Define init macro
- * @param   x   circular buffer label
- * @param   y   circulaire buffer size
+ *  @brief   Maccro d'initialisation du buffer circ
+ *  @param   x   label du buffer circ
+ *  @param   y   taille
  */
 #define CIRC_BBUF_DEF(x, y)      \
   uint8_t x##_data_space[y + 1]; \
@@ -104,7 +111,7 @@ typedef struct
       .maxlen = y + 1}
 
 /*!
- *  Reset the buffer to 0
+ *  réinitialiser le buffer à zero
  */
 #define CIRC_BBUF_RESET(x) \
   do                       \
@@ -135,6 +142,9 @@ CIRC_BBUF_DEF(cbuf2, CIRC_BUFFER_MAX_SIZE);
 CIRC_BBUF_DEF(cbuf, CIRC_BUFFER_MAX_SIZE);
 #endif
 
+/*!
+ *  Buffers de réception par uart
+ */
 #if USE_MULTIPLE_UART == 1
 uint8_t rxBuff1 = 0;
 uint8_t rxBuff2 = 0;
@@ -144,17 +154,20 @@ uint8_t rxBuff = 0;
 
 
 #if USE_MULTIPLE_UART == 1
-UART_HandleTypeDef *uart_table[MAX_UART_PORT] = {
-    0,
-    &huart2};
-
+/*!
+ *  Tableau contenant les différentes adresses de buffer circ
+ */
 circ_bbuf_t *bbuf_table[MAX_UART_PORT] = {
   &cbuf1,
   &cbuf2
 };
-
 #endif
 
+/*!
+ *  Port uart : utilisé comme index, on peut imagine une évolution 
+ *              avec envoi du port uart en plus du caractère pour
+ *              de meilleurs logs
+ */
 uint8_t uartPort = 2;
 
 /* USER CODE END PV */
@@ -216,6 +229,7 @@ int main(void)
 
   BSP_LED_Off(LED3);
   
+  //buffer d'envoi en i2c
   uint8_t bf = 0;
 
 #if USE_MULTIPLE_UART == 1
@@ -231,16 +245,21 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    //on tente de récup un caractère du buffer circ
 #if USE_MULTIPLE_UART == 1
-      if(circ_bbuf_pop(bbuf_table[uartPort-1], &bf) != -1)
+    if(circ_bbuf_pop(bbuf_table[uartPort-1], &bf) != -1)
 #else
-      if(circ_bbuf_pop(&cbuf, &bf) != -1)
+    if(circ_bbuf_pop(&cbuf, &bf) != -1)
 #endif
-      {
+    {
 #if USE_MULTIPLE_UART == 1
-        if(bf == '\n')
+      //si un des 2 uart n'a toujours pas reçu de données en uart, on ne change pas de port
+      if(rxBuff1 == 0 || rxBuff2 == 0)
+      {
+        //changement du port uart 
+        if(bf == '\r' || bf == '\n')
         {
-          if(uartPort == 4)
+          if(uartPort == MAX_UART_PORT)
           {
             uartPort = 1;
           }
@@ -249,15 +268,16 @@ int main(void)
             uartPort++;
           }
         }
+      }
 #endif    
 
-        if (HAL_I2C_Slave_Transmit(&hi2c1, &bf, 1, 0xFF) != HAL_OK)
-        {
-          BSP_LED_On(LED3);
-        }
-
+      //envoi du caractère par i2c 
+      if (HAL_I2C_Slave_Transmit(&hi2c1, &bf, 1, 0xFF) != HAL_OK)
+      {
+        BSP_LED_On(LED3);
       }
-    
+
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -330,7 +350,7 @@ static void MX_I2C1_Init(void)
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
   hi2c1.Init.Timing = 0x00100713;
-  hi2c1.Init.OwnAddress1 = 16;
+  hi2c1.Init.OwnAddress1 = 16;        //  == (I2C_ADDRESS << 1)
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
@@ -487,19 +507,26 @@ int circ_bbuf_free_space(circ_bbuf_t *c)
   return freeSpace - 1; // -1 to account for the always-empty slot.
 }
 
+
+/*!
+ * @brief   Callback de la fonction d'interuption HAL_UART_Receive_IT(...)
+ * @param   huart       pointeur vers une la structure de l'uart
+ * @retval  none
+ */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 #if USE_MULTIPLE_UART == 1
-  if(uartPort == 1)
+  if(huart == &huart2)
   {
-    circ_bbuf_push(&cbuf1, rxBuff1);
-    HAL_UART_Receive_IT(&lphuart1, &rxBuff1, 1);
+    circ_bbuf_push(&cbuf2, &rxBuff2, 1);
+    HAL_UART_Receive_IT(huart, &rxBuff2, 1);
   }
-  else if(uartPort == 2)
+  else if(huart == &lphuart1)
   {
-    circ_bbuf_push(&cbuf2, rxBuff2);
-    HAL_UART_Receive_IT(&huart2, &rxBuff2, 1);   
+    circ_bbuf_push(&cbuf1, &rxBuff1, 1);
+    HAL_UART_Receive_IT(huart, &rxBuff1, 1);
   }
+       
 #else
   circ_bbuf_push(&cbuf, rxBuff);
   HAL_UART_Receive_IT(&huart2, &rxBuff, 1);
