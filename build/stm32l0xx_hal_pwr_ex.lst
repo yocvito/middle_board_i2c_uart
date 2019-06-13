@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
   31:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c ****   */
   32:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c **** 
   33:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c **** /** @addtogroup PWREx 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 2
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 2
 
 
   34:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
   40              	.L3:
   41              		.align	2
   42              	.L2:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 3
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 3
 
 
   43 000c 00700040 		.word	1073770496
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
   87              	HAL_PWREx_DisableFastWakeUp:
   88              	.LFB36:
   88:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 4
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 4
 
 
   89:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
  127 0000 034A     		ldr	r2, .L11
  128 0002 1168     		ldr	r1, [r2]
  129 0004 8023     		movs	r3, #128
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 5
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 5
 
 
  130 0006 9B00     		lsls	r3, r3, #2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
  176              		.align	1
  177              		.global	HAL_PWREx_EnableLowPowerRunMode
  178              		.syntax unified
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 6
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 6
 
 
  179              		.code	16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
  216              		.syntax unified
  217              		.code	16
  218              		.thumb_func
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 7
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 7
 
 
  219              		.fpu softvfp
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
  253              		.loc 1 157 0
  254 0022 00E0     		b	.L20
  255              	.L22:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 8
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 8
 
 
  158:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c ****   {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
  297              		.text
  298              	.Letext0:
  299              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 9
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 9
 
 
  300              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
@@ -486,32 +486,32 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 1
  302              		.file 5 "Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h"
  303              		.file 6 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h"
  304              		.file 7 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s 			page 10
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l0xx_hal_pwr_ex.c
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:16     .text.HAL_PWREx_GetVoltageRange:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:23     .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:43     .text.HAL_PWREx_GetVoltageRange:0000000c $d
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:48     .text.HAL_PWREx_EnableFastWakeUp:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:55     .text.HAL_PWREx_EnableFastWakeUp:00000000 HAL_PWREx_EnableFastWakeUp
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:75     .text.HAL_PWREx_EnableFastWakeUp:00000010 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:80     .text.HAL_PWREx_DisableFastWakeUp:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:87     .text.HAL_PWREx_DisableFastWakeUp:00000000 HAL_PWREx_DisableFastWakeUp
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:106    .text.HAL_PWREx_DisableFastWakeUp:0000000c $d
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:112    .text.HAL_PWREx_EnableUltraLowPower:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:119    .text.HAL_PWREx_EnableUltraLowPower:00000000 HAL_PWREx_EnableUltraLowPower
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:139    .text.HAL_PWREx_EnableUltraLowPower:00000010 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:144    .text.HAL_PWREx_DisableUltraLowPower:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:151    .text.HAL_PWREx_DisableUltraLowPower:00000000 HAL_PWREx_DisableUltraLowPower
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:170    .text.HAL_PWREx_DisableUltraLowPower:0000000c $d
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:176    .text.HAL_PWREx_EnableLowPowerRunMode:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:183    .text.HAL_PWREx_EnableLowPowerRunMode:00000000 HAL_PWREx_EnableLowPowerRunMode
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:208    .text.HAL_PWREx_EnableLowPowerRunMode:00000018 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:214    .text.HAL_PWREx_DisableLowPowerRunMode:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:221    .text.HAL_PWREx_DisableLowPowerRunMode:00000000 HAL_PWREx_DisableLowPowerRunMode
-C:\Users\Nicolas\AppData\Local\Temp\ccDHfg21.s:290    .text.HAL_PWREx_DisableLowPowerRunMode:00000044 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:16     .text.HAL_PWREx_GetVoltageRange:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:23     .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:43     .text.HAL_PWREx_GetVoltageRange:0000000c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:48     .text.HAL_PWREx_EnableFastWakeUp:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:55     .text.HAL_PWREx_EnableFastWakeUp:00000000 HAL_PWREx_EnableFastWakeUp
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:75     .text.HAL_PWREx_EnableFastWakeUp:00000010 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:80     .text.HAL_PWREx_DisableFastWakeUp:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:87     .text.HAL_PWREx_DisableFastWakeUp:00000000 HAL_PWREx_DisableFastWakeUp
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:106    .text.HAL_PWREx_DisableFastWakeUp:0000000c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:112    .text.HAL_PWREx_EnableUltraLowPower:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:119    .text.HAL_PWREx_EnableUltraLowPower:00000000 HAL_PWREx_EnableUltraLowPower
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:139    .text.HAL_PWREx_EnableUltraLowPower:00000010 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:144    .text.HAL_PWREx_DisableUltraLowPower:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:151    .text.HAL_PWREx_DisableUltraLowPower:00000000 HAL_PWREx_DisableUltraLowPower
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:170    .text.HAL_PWREx_DisableUltraLowPower:0000000c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:176    .text.HAL_PWREx_EnableLowPowerRunMode:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:183    .text.HAL_PWREx_EnableLowPowerRunMode:00000000 HAL_PWREx_EnableLowPowerRunMode
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:208    .text.HAL_PWREx_EnableLowPowerRunMode:00000018 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:214    .text.HAL_PWREx_DisableLowPowerRunMode:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:221    .text.HAL_PWREx_DisableLowPowerRunMode:00000000 HAL_PWREx_DisableLowPowerRunMode
+C:\Users\Nicolas\AppData\Local\Temp\ccfaHCVj.s:290    .text.HAL_PWREx_DisableLowPowerRunMode:00000044 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

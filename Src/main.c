@@ -76,7 +76,7 @@ typedef struct circ_bbuf_t
 /*!
  *  1 pour usage multi uart sinon 0
  */
-#define USE_MULTIPLE_UART 0
+#define USE_MULTIPLE_UART 1
 
 /*!
  *  Nombres de ports uart connectés
@@ -130,6 +130,7 @@ typedef struct circ_bbuf_t
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 
+UART_HandleTypeDef hlpuart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
@@ -177,6 +178,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_LPUART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 
@@ -185,6 +187,11 @@ static void MX_I2C1_Init(void);
 int circ_bbuf_push(circ_bbuf_t *c, uint8_t data);
 int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data);
 int circ_bbuf_free_space(circ_bbuf_t *c);
+
+/*!
+ *  Fonction basique pour convertir un entier en caractère
+ */
+char itoch(int i);
 
 /* USER CODE END PFP */
 
@@ -223,6 +230,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
+  MX_LPUART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
   BSP_LED_Init(LED3);
@@ -230,10 +238,11 @@ int main(void)
   BSP_LED_Off(LED3);
   
   //buffer d'envoi en i2c
-  uint8_t bf = 0;
+  uint8_t txbuff[2] = {0};
+  uint8_t buff = 0;
 
 #if USE_MULTIPLE_UART == 1
-  HAL_UART_Receive_IT(&lphuart1, &rxBuff1, 1);
+  HAL_UART_Receive_IT(&hlpuart1, &rxBuff1, 1);
   HAL_UART_Receive_IT(&huart2, &rxBuff2, 1);
   /*mettre toutes les fonctions d'interupt*/
 #else
@@ -247,17 +256,19 @@ int main(void)
   {
     //on tente de récup un caractère du buffer circ
 #if USE_MULTIPLE_UART == 1
-    if(circ_bbuf_pop(bbuf_table[uartPort-1], &bf) != -1)
+    if(circ_bbuf_pop(bbuf_table[uartPort-1], &buff) != -1)
 #else
-    if(circ_bbuf_pop(&cbuf, &bf) != -1)
+    if(circ_bbuf_pop(&cbuf, &txbuff[1]) != -1)
 #endif
     {
+      txbuff[0] = buff;
+      txbuff[1] = itoch(uartPort);        //on convertie l'entier en caractere correspondant 
 #if USE_MULTIPLE_UART == 1
       //si un des 2 uart n'a toujours pas reçu de données en uart, on ne change pas de port
-      if(rxBuff1 == 0 || rxBuff2 == 0)
+      if(rxBuff1 != 0 && rxBuff2 != 0)
       {
         //changement du port uart 
-        if(bf == '\r' || bf == '\n')
+        if(txbuff[0] == '\r' || txbuff[0] == '\n')
         {
           if(uartPort == MAX_UART_PORT)
           {
@@ -271,8 +282,8 @@ int main(void)
       }
 #endif    
 
-      //envoi du caractère par i2c 
-      if (HAL_I2C_Slave_Transmit(&hi2c1, &bf, 1, 0xFF) != HAL_OK)
+      //envoi du caractère + le port uart par i2c 
+      if (HAL_I2C_Slave_Transmit(&hi2c1, txbuff, 2, 0xFF) != HAL_OK)
       {
         BSP_LED_On(LED3);
       }
@@ -324,8 +335,10 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_I2C1;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_LPUART1
+                              |RCC_PERIPHCLK_I2C1;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.Lpuart1ClockSelection = RCC_LPUART1CLKSOURCE_PCLK1;
   PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
@@ -350,7 +363,7 @@ static void MX_I2C1_Init(void)
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
   hi2c1.Init.Timing = 0x00100713;
-  hi2c1.Init.OwnAddress1 = 16;        //  == (I2C_ADDRESS << 1)
+  hi2c1.Init.OwnAddress1 = 16;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
@@ -379,6 +392,40 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
+
+}
+
+/**
+  * @brief LPUART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_LPUART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN LPUART1_Init 0 */
+
+  /* USER CODE END LPUART1_Init 0 */
+
+  /* USER CODE BEGIN LPUART1_Init 1 */
+
+  /* USER CODE END LPUART1_Init 1 */
+  hlpuart1.Instance = LPUART1;
+  hlpuart1.Init.BaudRate = 115200;
+  hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
+  hlpuart1.Init.StopBits = UART_STOPBITS_1;
+  hlpuart1.Init.Parity = UART_PARITY_NONE;
+  hlpuart1.Init.Mode = UART_MODE_TX_RX;
+  hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&hlpuart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN LPUART1_Init 2 */
+
+  /* USER CODE END LPUART1_Init 2 */
 
 }
 
@@ -510,7 +557,7 @@ int circ_bbuf_free_space(circ_bbuf_t *c)
 
 /*!
  * @brief   Callback de la fonction d'interuption HAL_UART_Receive_IT(...)
- * @param   huart       pointeur vers une la structure de l'uart
+ * @param   huart       pointeur vers une structure de l'uart
  * @retval  none
  */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
@@ -518,12 +565,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 #if USE_MULTIPLE_UART == 1
   if(huart == &huart2)
   {
-    circ_bbuf_push(&cbuf2, &rxBuff2, 1);
+    circ_bbuf_push(&cbuf2, rxBuff2);
     HAL_UART_Receive_IT(huart, &rxBuff2, 1);
   }
-  else if(huart == &lphuart1)
+  else if(huart == &hlpuart1)
   {
-    circ_bbuf_push(&cbuf1, &rxBuff1, 1);
+    circ_bbuf_push(&cbuf1, rxBuff1);
     HAL_UART_Receive_IT(huart, &rxBuff1, 1);
   }
        
@@ -531,6 +578,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   circ_bbuf_push(&cbuf, rxBuff);
   HAL_UART_Receive_IT(&huart2, &rxBuff, 1);
 #endif
+}
+
+char itoch(int i)
+{
+  return (i + '0') ;
 }
 
 /* USER CODE END 4 */
