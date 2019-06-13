@@ -38,6 +38,7 @@ Mcu.UserName=STM32L011K4Tx
 MxCube.Version=5.0.1
 MxDb.Version=DB.5.0.1
 NVIC.HardFault_IRQn=true\:0\:0\:false\:false\:true\:false
+NVIC.LPUART1_IRQn=true\:0\:0\:false\:false\:true\:true
 NVIC.NonMaskableInt_IRQn=true\:0\:0\:false\:false\:true\:false
 NVIC.PendSV_IRQn=true\:0\:0\:false\:false\:true\:false
 NVIC.SVC_IRQn=true\:0\:0\:false\:false\:true\:false

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
   31:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     (#) Configure the enable or disable of fast mode plus driving capability using the functions :
   32:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_EnableFastModePlus()
   33:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_DisableFastModePlus()
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 2
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 2
 
 
   34:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   @endverbatim
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
   88:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   */
   89:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
   90:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** /**
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 3
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 3
 
 
   91:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   * @brief  Configure I2C Analog noise filter.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
   59 0020 3368     		ldr	r3, [r6]
   60 0022 9343     		bics	r3, r2
   61 0024 3360     		str	r3, [r6]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 4
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 4
 
 
  112:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
   95              		.loc 1 132 0
   96              		@ sp needed
   97 004e F0BD     		pop	{r4, r5, r6, r7, pc}
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 5
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 5
 
 
   98              	.LVL5:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  136 0004 C35C     		ldrb	r3, [r0, r3]
  137 0006 202B     		cmp	r3, #32
  138 0008 1ED1     		bne	.L9
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 6
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 6
 
 
  150:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  171:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
  172              		.loc 1 171 0 discriminator 2
  173 0034 0168     		ldr	r1, [r0]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 7
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 7
 
 
  174              	.LVL12:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  215              		.code	16
  216              		.thumb_func
  217              		.fpu softvfp
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 8
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 8
 
 
  219              	HAL_I2CEx_EnableWakeUp:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  252 001e 0568     		ldr	r5, [r0]
  253 0020 2B68     		ldr	r3, [r5]
  254 0022 9343     		bics	r3, r2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 9
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 9
 
 
  255 0024 2B60     		str	r3, [r5]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  290 004a 0220     		movs	r0, #2
  291              	.LVL24:
  292 004c FCE7     		b	.L14
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 10
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 10
 
 
  293              		.cfi_endproc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  241:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****     hi2c->State = HAL_I2C_STATE_BUSY;
  332              		.loc 1 241 0 is_stmt 1 discriminator 2
  333 0018 4124     		movs	r4, #65
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 11
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 11
 
 
  334 001a 2423     		movs	r3, #36
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  262:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** }
  368              		.loc 1 262 0
  369              		@ sp needed
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 12
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 12
 
 
  370 0046 70BD     		pop	{r4, r5, r6, pc}
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  401 0000 044A     		ldr	r2, .L24
  402 0002 536B     		ldr	r3, [r2, #52]
  403 0004 0121     		movs	r1, #1
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 13
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 13
 
 
  404 0006 0B43     		orrs	r3, r1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  438              	.LVL33:
  309:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   /* Check the parameter */
  310:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c ****   assert_param(IS_I2C_FASTMODEPLUS(ConfigFastModePlus));
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 14
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 14
 
 
  311:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c **** 
@@ -819,27 +819,27 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 1
  468              		.file 7 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h"
  469              		.file 8 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h"
  470              		.file 9 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s 			page 15
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l0xx_hal_i2c_ex.c
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:16     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:23     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:107    .text.HAL_I2CEx_ConfigAnalogFilter:00000054 $d
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:112    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:119    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:207    .text.HAL_I2CEx_ConfigDigitalFilter:00000050 $d
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:212    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:219    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:297    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:304    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:380    .text.HAL_I2CEx_DisableWakeUp:0000004c $d
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:385    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:392    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:418    .text.HAL_I2CEx_EnableFastModePlus:00000014 $d
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:424    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:431    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
-C:\Users\Nicolas\AppData\Local\Temp\cc6tRBhX.s:456    .text.HAL_I2CEx_DisableFastModePlus:00000014 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:16     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:23     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:107    .text.HAL_I2CEx_ConfigAnalogFilter:00000054 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:112    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:119    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:207    .text.HAL_I2CEx_ConfigDigitalFilter:00000050 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:212    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:219    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:297    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:304    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:380    .text.HAL_I2CEx_DisableWakeUp:0000004c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:385    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:392    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:418    .text.HAL_I2CEx_EnableFastModePlus:00000014 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:424    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:431    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
+C:\Users\Nicolas\AppData\Local\Temp\ccicGkFX.s:456    .text.HAL_I2CEx_DisableFastModePlus:00000014 $d
 
 NO UNDEFINED SYMBOLS

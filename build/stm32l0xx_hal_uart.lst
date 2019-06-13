@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
   32:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****                 RXNE interrupt, RX/TX FIFOs related interrupts and Error Interrupts)
   33:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****                 are managed using the macros __HAL_UART_ENABLE_IT() and __HAL_UART_DISABLE_IT()
   34:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****                 inside the transmit and receive processes.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 2
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 2
 
 
   35:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         (++) DMA Configuration if you need to use DMA process (HAL_UART_Transmit_DMA()
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
   89:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     (+) RxFifoFullCallback        : Rx Fifo Full Callback.
   90:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     (+) TxFifoEmptyCallback       : Tx Fifo Empty Callback.
   91:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     (+) MspInitCallback           : UART MspInit.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 3
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 3
 
 
   92:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     (+) MspDeInitCallback         : UART MspDeInit.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  146:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * All rights reserved.</center></h2>
  147:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *
  148:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * This software component is licensed by ST under BSD 3-Clause license,
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 4
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 4
 
 
  149:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * the "License"; You may not use this file except in compliance with the
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  203:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_DMARxHalfCplt(DMA_HandleTypeDef *hdma);
  204:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_DMATxHalfCplt(DMA_HandleTypeDef *hdma);
  205:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_DMAError(DMA_HandleTypeDef *hdma);
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 5
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 5
 
 
  206:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_DMAAbortOnError(DMA_HandleTypeDef *hdma);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  260:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** @endverbatim
  261:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  262:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   Depending on the frame length defined by the M1 and M0 bits (7-bit,
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 6
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 6
 
 
  263:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   8-bit or 9-bit), the possible UART formats are listed in the
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  317:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     UART_InitCallbacksToDefault(huart);
  318:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  319:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     if (huart->MspInitCallback == NULL)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 7
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 7
 
 
  320:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  374:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  375:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Check UART instance */
  376:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   assert_param(IS_UART_HALFDUPLEX_INSTANCE(huart->Instance));
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 8
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 8
 
 
  377:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  431:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  432:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** /**
  433:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @brief Initialize the LIN mode according to the specified
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 9
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 9
 
 
  434:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *        parameters in the UART_InitTypeDef and creates the associated handle.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  488:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  489:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Disable the Peripheral */
  490:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   __HAL_UART_DISABLE(huart);
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 10
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 10
 
 
  491:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  545:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
  546:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     return HAL_ERROR;
  547:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 11
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 11
 
 
  548:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  602:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1, USART_CR1_WAKE, WakeUpMethod);
  603:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  604:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Enable the Peripheral */
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 12
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 12
 
 
  605:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   __HAL_UART_ENABLE(huart);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  659:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** /**
  660:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @brief Initialize the UART MSP.
  661:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param huart UART handle.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 13
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 13
 
 
  662:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval None
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  716:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   if (pCallback == NULL)
  717:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
  718:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     /* Update the error code */
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 14
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 14
 
 
  719:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     huart->ErrorCode |= HAL_UART_ERROR_INVALID_CALLBACK;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  773:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         break;
  774:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  775:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       default :
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 15
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 15
 
 
  776:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         /* Update the error code */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  830:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           @arg @ref HAL_UART_ERROR_CB_ID Error Callback ID
  831:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           @arg @ref HAL_UART_ABORT_COMPLETE_CB_ID Abort Complete Callback ID
  832:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           @arg @ref HAL_UART_ABORT_TRANSMIT_COMPLETE_CB_ID Abort Transmit Complete Callback ID
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 16
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 16
 
 
  833:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           @arg @ref HAL_UART_ABORT_RECEIVE_COMPLETE_CB_ID Abort Receive Complete Callback ID
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  887:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  888:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       case HAL_UART_MSPINIT_CB_ID :
  889:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         huart->MspInitCallback = HAL_UART_MspInit;                             /* Legacy weak MspIn
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 17
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 17
 
 
  890:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         break;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  944:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
  945:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  946:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** /** @defgroup UART_Exported_Functions_Group2 IO operation functions
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 18
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 18
 
 
  947:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @brief UART Transmit/Receive functions
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1001:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         (+) HAL_UART_AbortCpltCallback()
 1002:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         (+) HAL_UART_AbortTransmitCpltCallback()
 1003:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         (+) HAL_UART_AbortReceiveCpltCallback()
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 19
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 19
 
 
 1004:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1058:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
 1059:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 1060:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     /* Process Locked */
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 20
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 20
 
 
 1061:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     __HAL_LOCK(huart);
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1115:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
 1116:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   else
 1117:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 21
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 21
 
 
 1118:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     return HAL_BUSY;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1172:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     /* Computation of UART mask to apply to RDR register */
 1173:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     UART_MASK_COMPUTATION(huart);
 1174:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     uhMask = huart->Mask;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 22
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 22
 
 
 1175:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1229:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param pData Pointer to data buffer.
 1230:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param Size  Amount of data to be sent.
 1231:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval HAL status
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 23
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 23
 
 
 1232:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1286:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
 1287:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** }
 1288:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 24
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 24
 
 
 1289:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** /**
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1343:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     else
 1344:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
 1345:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       huart->RxISR = UART_RxISR_8BIT;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 25
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 25
 
 
 1346:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1400:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 1401:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     huart->ErrorCode = HAL_UART_ERROR_NONE;
 1402:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     huart->gState = HAL_UART_STATE_BUSY_TX;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 26
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 26
 
 
 1403:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1457:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *         (as received data will be handled by DMA from halfword frontier). Depending on compilat
 1458:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *         use of specific alignment compilation directives or pragmas might be required to ensure
 1459:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param huart UART handle.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 27
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 27
 
 
 1460:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param pData Pointer to data buffer.
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1514:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         /* Process Unlocked */
 1515:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         __HAL_UNLOCK(huart);
 1516:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 28
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 28
 
 
 1517:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         /* Restore huart->gState to ready */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1571:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAR);
 1572:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
 1573:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 29
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 29
 
 
 1574:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Process Unlocked */
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1628:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   const HAL_UART_StateTypeDef gstate = huart->gState;
 1629:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   const HAL_UART_StateTypeDef rxstate = huart->RxState;
 1630:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 30
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 30
 
 
 1631:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Stop UART DMA Tx request if ongoing */
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1685:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @note   This procedure could be used for aborting any ongoing transfer started in Interrupt or 
 1686:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *         This procedure performs following operations :
 1687:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           - Disable UART Interrupts (Tx and Rx)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 31
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 31
 
 
 1688:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           - Disable the DMA transfer in the peripheral register (if enabled)
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1742:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           huart->ErrorCode = HAL_UART_ERROR_DMA;
 1743:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 1744:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           return HAL_TIMEOUT;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 32
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 32
 
 
 1745:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         }
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1799:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 1800:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       if (HAL_DMA_Abort(huart->hdmatx) != HAL_OK)
 1801:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 33
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 33
 
 
 1802:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         if (HAL_DMA_GetError(huart->hdmatx) == HAL_DMA_ERROR_TIMEOUT)
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1856:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         {
 1857:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           /* Set error code to DMA */
 1858:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           huart->ErrorCode = HAL_UART_ERROR_DMA;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 34
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 34
 
 
 1859:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1913:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
 1914:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     else
 1915:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 35
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 35
 
 
 1916:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       huart->hdmatx->XferAbortCallback = NULL;
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1970:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       if (HAL_DMA_Abort_IT(huart->hdmarx) != HAL_OK)
 1971:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       {
 1972:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         huart->hdmarx->XferAbortCallback = NULL;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 36
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 36
 
 
 1973:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         abortcplt = 1U;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2027:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           - Abort DMA transfer by calling HAL_DMA_Abort_IT (in case of transfer in DMA mode)
 2028:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           - Set handle State to READY
 2029:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   *           - At abort completion, call user abort complete callback
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 37
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 37
 
 
 2030:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @note   This procedure is executed in Interrupt mode, meaning that abort procedure could be
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2084:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     /* Clear TxISR function pointers */
 2085:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     huart->TxISR = NULL;
 2086:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 38
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 38
 
 
 2087:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2141:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       }
 2142:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
 2143:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     else
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 39
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 39
 
 
 2144:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2198:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @brief Handle UART interrupt request.
 2199:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param huart UART handle.
 2200:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval None
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 40
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 40
 
 
 2201:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2255:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 2256:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     /* UART Over-Run interrupt occurred -----------------------------------------*/
 2257:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     if (((isrflags & USART_ISR_ORE) != 0U)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 41
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 41
 
 
 2258:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         && (((cr1its & USART_CR1_RXNEIE) != 0U) ||
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2312:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 2313:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****             /*Call registered error callback*/
 2314:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****             huart->ErrorCallback(huart);
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 42
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 42
 
 
 2315:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** #else
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2369:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 2370:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* UART in mode Transmitter ------------------------------------------------*/
 2371:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   if (((isrflags & USART_ISR_TXE) != 0U)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 43
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 43
 
 
 2372:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       && ((cr1its & USART_CR1_TXEIE) != 0U))
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2426:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
 2427:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
 2428:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   UNUSED(huart);
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 44
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 44
 
 
 2429:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2483:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval None
 2484:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
 2485:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** __weak void HAL_UART_AbortTransmitCpltCallback(UART_HandleTypeDef *huart)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 45
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 45
 
 
 2486:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2540:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval HAL status
 2541:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
 2542:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** HAL_StatusTypeDef HAL_MultiProcessor_EnableMuteMode(UART_HandleTypeDef *huart)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 46
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 46
 
 
 2543:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2597:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   __HAL_LOCK(huart);
 2598:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_BUSY;
 2599:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 47
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 47
 
 
 2600:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Clear TE and RE bits */
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2654:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 2655:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Send break characters */
 2656:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   __HAL_UART_SEND_REQ(huart, UART_SENDBREAK_REQUEST);
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 48
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 48
 
 
 2657:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2711:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** /**
 2712:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @}
 2713:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 49
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 49
 
 
 2714:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2768:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     assert_param(IS_UART_STOPBITS(huart->Init.StopBits));
 2769:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     assert_param(IS_UART_ONE_BIT_SAMPLE(huart->Init.OneBitSampling));
 2770:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 50
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 50
 
 
 2771:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2825:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         {
 2826:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           lpuart_ker_ck_pres = (uint32_t)HSI_VALUE;
 2827:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 51
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 51
 
 
 2828:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         break;
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2882:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         else
 2883:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         {
 2884:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           usartdiv = (uint16_t)(UART_DIV_SAMPLING8(HSI_VALUE, huart->Init.BaudRate));
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 52
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 52
 
 
 2885:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         }
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2939:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         ret = HAL_ERROR;
 2940:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         break;
 2941:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 53
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 53
 
 
 2942:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2996:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     assert_param(IS_UART_ADVFEATURE_SWAP(huart->AdvancedInit.Swap));
 2997:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     MODIFY_REG(huart->Instance->CR2, USART_CR2_SWAP, huart->AdvancedInit.Swap);
 2998:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 54
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 54
 
 
 2999:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3053:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
 3054:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     /* Wait until TEACK flag is set */
 3055:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     if (UART_WaitOnFlagUntilTimeout(huart, USART_ISR_TEACK, RESET, tickstart, HAL_UART_TIMEOUT_VALU
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 55
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 55
 
 
 3056:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3110:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         __HAL_UNLOCK(huart);
 3111:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 3112:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         return HAL_TIMEOUT;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 56
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 56
 
 
 3113:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       }
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3139:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
 3140:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_EndRxTransfer(UART_HandleTypeDef *huart)
 3141:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 57
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 57
 
 
   55              		.loc 1 3141 0
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3154:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** /**
 3155:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @brief DMA UART transmit process complete callback.
 3156:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @param hdma DMA handle.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 58
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 58
 
 
 3157:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval None
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3211:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_DMAReceiveCplt(DMA_HandleTypeDef *hdma)
 3212:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
 3213:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 59
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 59
 
 
 3214:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3268:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   const HAL_UART_StateTypeDef gstate = huart->gState;
 3269:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   const HAL_UART_StateTypeDef rxstate = huart->RxState;
 3270:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 60
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 60
 
 
 3271:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Stop UART DMA Tx request if ongoing */
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3325:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   * @retval None
 3326:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   */
 3327:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_DMATxAbortCallback(DMA_HandleTypeDef *hdma)
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 61
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 61
 
 
 3328:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3382:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Check if an Abort process is still ongoing */
 3383:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   if (huart->hdmatx != NULL)
 3384:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 62
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 62
 
 
 3385:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     if (huart->hdmatx->XferAbortCallback != NULL)
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3439:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Call registered Abort Transmit Complete Callback */
 3440:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   huart->AbortTransmitCpltCallback(huart);
 3441:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** #else
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 63
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 63
 
 
 3442:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Call legacy weak Abort Transmit Complete Callback */
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3490:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_BUSY_TX)
  105              		.loc 1 3490 0
  106 0000 436F     		ldr	r3, [r0, #116]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 64
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 64
 
 
  107 0002 212B     		cmp	r3, #33
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  139 002c 0268     		ldr	r2, [r0]
  140 002e 1368     		ldr	r3, [r2]
  141 0030 8021     		movs	r1, #128
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 65
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 65
 
 
  142 0032 8B43     		bics	r3, r1
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3531:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     else
 3532:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
 3533:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       tmp = (uint16_t *) huart->pTxBuffPtr;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 66
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 66
 
 
 3534:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       huart->Instance->TDR = (*tmp & (uint16_t)0x01FF);
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  216 0040 0B43     		orrs	r3, r1
  217 0042 1360     		str	r3, [r2]
  218 0044 DFE7     		b	.L10
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 67
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 67
 
 
  219              		.cfi_endproc
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  275              	.LFB38:
  618:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Check the UART handle allocation */
  276              		.loc 1 618 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 68
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 68
 
 
  277              		.cfi_startproc
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  320 002c 7023     		movs	r3, #112
  321 002e E554     		strb	r5, [r4, r3]
  656:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 69
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 69
 
 
  322              		.loc 1 656 0
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  371 0012 8024     		movs	r4, #128
  372 0014 6401     		lsls	r4, r4, #5
  373 0016 A342     		cmp	r3, r4
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 70
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 70
 
 
  374 0018 20D0     		beq	.L30
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  417 004a 0022     		movs	r2, #0
  418 004c C254     		strb	r2, [r0, r3]
 1279:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 71
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 71
 
 
  419              		.loc 1 1279 0
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  464 007a 0120     		movs	r0, #1
  465              	.LVL25:
  466 007c FCE7     		b	.L21
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 72
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 72
 
 
  467              	.LVL26:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  518 0010 00D1     		bne	.LCB410
  519 0012 6BE0     		b	.L48	@long jump
  520              	.LCB410:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 73
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 73
 
 
 1313:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  565 004e FF22     		movs	r2, #255
  566 0050 C252     		strh	r2, [r0, r3]
  567 0052 1CE0     		b	.L39
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 74
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 74
 
 
  568              	.LVL35:
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  613 008c C252     		strh	r2, [r0, r3]
  614              	.L39:
 1332:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     huart->RxState = HAL_UART_STATE_BUSY_RX;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 75
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 75
 
 
  615              		.loc 1 1332 0 is_stmt 1
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  660 00ca 7F22     		movs	r2, #127
  661 00cc C252     		strh	r2, [r0, r3]
  662 00ce DEE7     		b	.L39
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 76
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 76
 
 
  663              	.L43:
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  710              		.cfi_endproc
  711              	.LFE44:
  713              		.section	.text.HAL_UART_Transmit_DMA,"ax",%progbits
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 77
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 77
 
 
  714              		.align	1
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  761              		.loc 1 1397 0 is_stmt 1 discriminator 2
  762 002a E164     		str	r1, [r4, #76]
 1398:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     huart->TxXferCount = Size;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 78
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 78
 
 
  763              		.loc 1 1398 0 discriminator 2
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1434:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  808              		.loc 1 1434 0
  809 006c 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 79
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 79
 
 
  810 006e 4022     		movs	r2, #64
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1447:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
  854              		.loc 1 1447 0
  855 00a6 0220     		movs	r0, #2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 80
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 80
 
 
  856              	.LVL56:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  907 0006 2028     		cmp	r0, #32
  908 0008 51D1     		bne	.L74
 1469:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 81
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 81
 
 
  909              		.loc 1 1469 0
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  952 0044 1F49     		ldr	r1, .L81+4
  953 0046 1963     		str	r1, [r3, #48]
 1503:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 82
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 82
 
 
  954              		.loc 1 1503 0
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1477:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
  1001              		.loc 1 1477 0 discriminator 1
  1002 008e 2369     		ldr	r3, [r4, #16]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 83
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 83
 
 
  1003 0090 002B     		cmp	r3, #0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1047 00bc F8E7     		b	.L71
  1048              	.L82:
  1049 00be C046     		.align	2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 84
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 84
 
 
  1050              	.L81:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1099 001e 0AD0     		beq	.L88
  1100              	.LVL73:
  1101              	.L85:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 85
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 85
 
 
 1563:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       (rxstate == HAL_UART_STATE_BUSY_RX))
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1147              		.loc 1 1571 0
  1148 0054 0268     		ldr	r2, [r0]
  1149 0056 9368     		ldr	r3, [r2, #8]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 86
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 86
 
 
  1150 0058 3F31     		adds	r1, r1, #63
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1200 0018 0AD0     		beq	.L98
  1201              	.L95:
 1609:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 87
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 87
 
 
  1202              		.loc 1 1609 0
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1248              		.loc 1 1588 0
  1249 0058 0220     		movs	r0, #2
  1250              	.LVL85:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 88
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 88
 
 
  1251 005a E2E7     		b	.L93
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1300 001c 222D     		cmp	r5, #34
  1301 001e 19D0     		beq	.L107
 1679:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 89
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 89
 
 
  1302              		.loc 1 1679 0 is_stmt 1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1662:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
  1348              		.loc 1 1662 0
  1349 005c E06E     		ldr	r0, [r4, #108]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 90
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 90
 
 
  1350 005e 0028     		cmp	r0, #0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1398              	HAL_UART_Abort:
  1399              	.LFB50:
 1695:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Disable TXEIE, TCIE, RXNE, PE and ERR (Frame error, noise error, overrun error) interrupts */
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 91
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 91
 
 
  1400              		.loc 1 1695 0
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1447 003c 24D1     		bne	.L114
  1448              	.L111:
 1726:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 92
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 92
 
 
  1449              		.loc 1 1726 0
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1493              		.loc 1 1763 0
  1494 0080 A267     		str	r2, [r4, #120]
 1766:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 93
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 93
 
 
  1495              		.loc 1 1766 0
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1542              		.code	16
  1543              		.thumb_func
  1544              		.fpu softvfp
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 94
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 94
 
 
  1546              	HAL_UART_AbortTransmit:
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1592 0034 0022     		movs	r2, #0
  1593 0036 E252     		strh	r2, [r4, r3]
 1818:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 95
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 95
 
 
  1594              		.loc 1 1818 0
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1643 0004 0268     		ldr	r2, [r0]
  1644 0006 1368     		ldr	r3, [r2]
  1645 0008 1949     		ldr	r1, .L126
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 96
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 96
 
 
  1646 000a 0B40     		ands	r3, r1
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1691 004e 0821     		movs	r1, #8
  1692 0050 0B43     		orrs	r3, r1
  1693 0052 9361     		str	r3, [r2, #24]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 97
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 97
 
 
 1876:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1742              		@ sp needed
  1743 0000 7047     		bx	lr
  1744              		.cfi_endproc
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 98
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 98
 
 
  1745              	.LFE57:
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1794              		@ sp needed
  1795 0026 10BD     		pop	{r4, pc}
  1796              	.LVL126:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 99
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 99
 
 
  1797              	.L130:
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3555:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
 3556:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   /* Cleat TxISR function pointer */
 3557:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   huart->TxISR = NULL;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 100
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 100
 
 
  1836              		.loc 1 3557 0
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1882              		@ frame_needed = 0, uses_anonymous_args = 0
  1883              	.LVL132:
  1884 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 101
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 101
 
 
  1885              	.LCFI12:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3573:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** static void UART_RxISR_8BIT(UART_HandleTypeDef *huart)
 3574:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** {
  1932              		.loc 1 3574 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 102
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 102
 
 
  1933              		.cfi_startproc
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3612:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     __HAL_UART_SEND_REQ(huart, UART_RXDATA_FLUSH_REQUEST);
  1950              		.loc 1 3612 0
  1951 000c 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 103
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 103
 
 
  1952 000e 9369     		ldr	r3, [r2, #24]
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  1997              		.loc 1 3592 0
  1998 0046 0268     		ldr	r2, [r0]
  1999 0048 9368     		ldr	r3, [r2, #8]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 104
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 104
 
 
  2000 004a 2331     		adds	r1, r1, #35
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2041 0002 5C23     		movs	r3, #92
  2042 0004 C25A     		ldrh	r2, [r0, r3]
  2043              	.LVL147:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 105
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 105
 
 
 3627:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   uint16_t  uhdata;
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2058              		@ sp needed
  2059 0016 10BD     		pop	{r4, pc}
  2060              	.LVL150:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 106
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 106
 
 
  2061              	.L145:
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2106 0054 0023     		movs	r3, #0
  2107 0056 0366     		str	r3, [r0, #96]
 3657:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 107
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 107
 
 
  2108              		.loc 1 3657 0
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2158 001c 1968     		ldr	r1, [r3]
  2159 001e 8A68     		ldr	r2, [r1, #8]
  2160 0020 0330     		adds	r0, r0, #3
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 108
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 108
 
 
  2161 0022 FF30     		adds	r0, r0, #255
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2212              		.syntax unified
  2213              		.code	16
  2214              		.thumb_func
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 109
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 109
 
 
  2215              		.fpu softvfp
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2267              		.thumb_func
  2268              		.fpu softvfp
  2270              	UART_DMAError:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 110
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 110
 
 
  2271              	.LFB83:
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2316 0026 E367     		str	r3, [r4, #124]
 3294:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
  2317              		.loc 1 3294 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 111
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 111
 
 
  2318 0028 2000     		movs	r0, r4
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2368              	.LCFI18:
  2369              		.cfi_def_cfa_offset 16
  2370              		.cfi_offset 4, -16
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 112
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 112
 
 
  2371              		.cfi_offset 5, -12
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2229:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           || ((cr1its & (USART_CR1_RXNEIE | USART_CR1_PEIE)) != 0U)))
  2415              		.loc 1 2229 0
  2416 002c 0122     		movs	r2, #1
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 113
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 113
 
 
  2417              	.LVL188:
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2460              		.loc 1 2249 0 is_stmt 0 discriminator 1
  2461 0066 002A     		cmp	r2, #0
  2462 0068 06D0     		beq	.L167
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 114
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 114
 
 
 2251:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2506 00a2 01D0     		beq	.L170
 2275:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         }
  2507              		.loc 1 2275 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 115
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 115
 
 
  2508 00a4 2000     		movs	r0, r4
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2552              		.loc 1 2306 0
  2553 00e0 E06E     		ldr	r0, [r4, #108]
  2554 00e2 836B     		ldr	r3, [r0, #56]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 116
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 116
 
 
  2555 00e4 9847     		blx	r3
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2376:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
  2600              		.loc 1 2376 0
  2601 011a 2000     		movs	r0, r4
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 117
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 117
 
 
  2602              	.LVL203:
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2648              		.cfi_endproc
  2649              	.LFE56:
  2651              		.section	.text.UART_DMAAbortOnError,"ax",%progbits
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 118
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 118
 
 
  2652              		.align	1
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2702              		@ frame_needed = 0, uses_anonymous_args = 0
  2703              		@ link register save eliminated.
  2704              	.LVL219:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 119
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 119
 
 
 2478:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1912:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
  2755              		.loc 1 1912 0
  2756 0028 2C4A     		ldr	r2, .L195+4
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 120
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 120
 
 
  2757 002a 9A63     		str	r2, [r3, #56]
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2801              		.loc 1 1916 0
  2802 0066 0022     		movs	r2, #0
  2803 0068 9A63     		str	r2, [r3, #56]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 121
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 121
 
 
  2804 006a DFE7     		b	.L184
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2848 00a2 2366     		str	r3, [r4, #96]
 1991:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  2849              		.loc 1 1991 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 122
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 122
 
 
  2850 00a4 6366     		str	r3, [r4, #100]
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2894              	.L196:
  2895 00d6 C046     		.align	2
  2896              	.L195:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 123
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 123
 
 
  2897 00d8 1FFEFFFF 		.word	-481
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2946 001a 5222     		movs	r2, #82
  2947 001c 8352     		strh	r3, [r0, r2]
 3393:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 124
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 124
 
 
  2948              		.loc 1 3393 0
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  2996              	.LVL239:
 3331:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  2997              		.loc 1 3331 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 125
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 125
 
 
  2998 0004 836E     		ldr	r3, [r0, #104]
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3043              		.weak	HAL_UART_AbortTransmitCpltCallback
  3044              		.syntax unified
  3045              		.code	16
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 126
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 126
 
 
  3046              		.thumb_func
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3097 0018 4039     		subs	r1, r1, #64
  3098 001a 8A43     		bics	r2, r1
  3099 001c 9A60     		str	r2, [r3, #8]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 127
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 127
 
 
 2045:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     {
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3144 0050 5222     		movs	r2, #82
  3145 0052 8352     		strh	r3, [r0, r2]
 2085:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 128
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 128
 
 
  3146              		.loc 1 2085 0
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3194              		.loc 1 3445 0
  3195              		@ sp needed
  3196 0012 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 129
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 129
 
 
  3197              		.cfi_endproc
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3250 000e 0268     		ldr	r2, [r0]
  3251 0010 9368     		ldr	r3, [r2, #8]
  3252 0012 2331     		adds	r1, r1, #35
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 130
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 130
 
 
  3253 0014 FF31     		adds	r1, r1, #255
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3298 004e 4365     		str	r3, [r0, #84]
 2152:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  3299              		.loc 1 2152 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 131
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 131
 
 
  3300 0050 0368     		ldr	r3, [r0]
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3347              		.fpu softvfp
  3349              	UART_DMARxOnlyAbortCallback:
  3350              	.LFB88:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 132
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 132
 
 
 3456:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3399              	.LFB67:
 2585:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   __HAL_UART_SEND_REQ(huart, UART_MUTE_MODE_REQUEST);
  3400              		.loc 1 2585 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 133
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 133
 
 
  3401              		.cfi_startproc
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3450              		.loc 1 2601 0 discriminator 2
  3451 0014 0168     		ldr	r1, [r0]
  3452 0016 0B68     		ldr	r3, [r1]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 134
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 134
 
 
  3453 0018 0C24     		movs	r4, #12
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3502              		.cfi_offset 4, -8
  3503              		.cfi_offset 14, -4
 2622:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_BUSY;
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 135
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 135
 
 
  3504              		.loc 1 2622 0
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3550              		.section	.text.HAL_LIN_SendBreak,"ax",%progbits
  3551              		.align	1
  3552              		.global	HAL_LIN_SendBreak
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 136
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 136
 
 
  3553              		.syntax unified
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3599              		@ sp needed
  3600 0028 10BD     		pop	{r4, pc}
  3601              	.LVL280:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 137
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 137
 
 
  3602              	.L228:
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3653              		@ args = 0, pretend = 0, frame = 0
  3654              		@ frame_needed = 0, uses_anonymous_args = 0
  3655              		@ link register save eliminated.
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 138
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 138
 
 
  3656              	.LVL286:
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3706              	.LVL291:
  3707 0018 0240     		ands	r2, r0
  3708 001a 1343     		orrs	r3, r2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 139
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 139
 
 
  3709              	.LVL292:
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3754 0056 8A42     		cmp	r2, r1
  3755 0058 40D0     		beq	.L286
 2867:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 140
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 140
 
 
  3756              		.loc 1 2867 0
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3806              		.loc 1 2808 0 discriminator 1
  3807 008c 002B     		cmp	r3, #0
  3808 008e 03D1     		bne	.L234
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 141
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 141
 
 
 2808:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3856              	.L241:
  3857              	.LVL308:
 2808:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 142
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 142
 
 
  3858              		.loc 1 2808 0 discriminator 17
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3905              	.L251:
 2845:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****           (lpuart_ker_ck_pres > (4096U * huart->Init.BaudRate)))
  3906              		.loc 1 2845 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 143
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 143
 
 
  3907 0102 6268     		ldr	r2, [r4, #4]
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  3954 0144 7448     		ldr	r0, .L292+36
  3955 0146 DCE7     		b	.L251
  3956              	.LVL317:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 144
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 144
 
 
  3957              	.L250:
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4005              		.loc 1 2756 0
  4006 0174 0020     		movs	r0, #0
  4007              	.LVL325:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 145
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 145
 
 
  4008              	.L254:
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4054              		.loc 1 2878 0
  4055 01b0 564B     		ldr	r3, .L292+24
  4056 01b2 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 146
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 146
 
 
  4057 01b4 DB06     		lsls	r3, r3, #27
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2756:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   uint32_t lpuart_ker_ck_pres         = 0x00000000U;
  4106              		.loc 1 2756 0
  4107 01fe 0020     		movs	r0, #0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 147
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 147
 
 
 2889:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****       case UART_CLOCKSOURCE_LSE:
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4153              		.loc 1 2944 0
  4154 0238 3A49     		ldr	r1, .L292+48
  4155 023a 1A00     		movs	r2, r3
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 148
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 148
 
 
  4156 023c 103A     		subs	r2, r2, #16
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4201 0272 2A4B     		ldr	r3, .L292+40
  4202 0274 9C46     		mov	ip, r3
  4203 0276 6044     		add	r0, r0, ip
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 149
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 149
 
 
  4204 0278 6168     		ldr	r1, [r4, #4]
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4251 02b6 6368     		ldr	r3, [r4, #4]
  4252 02b8 5808     		lsrs	r0, r3, #1
  4253 02ba 8023     		movs	r3, #128
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 150
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 150
 
 
  4254 02bc 1B02     		lsls	r3, r3, #8
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4300 02ea 0120     		movs	r0, #1
  4301              	.LVL377:
  4302 02ec ABE7     		b	.L246
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 151
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 151
 
 
  4303              	.LVL378:
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4355 000e 816A     		ldr	r1, [r0, #40]
  4356 0010 0B43     		orrs	r3, r1
  4357 0012 5360     		str	r3, [r2, #4]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 152
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 152
 
 
  4358              	.L295:
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4404 0058 9368     		ldr	r3, [r2, #8]
  4405 005a 1C49     		ldr	r1, .L304+16
  4406 005c 0B40     		ands	r3, r1
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 153
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 153
 
 
  4407 005e 816B     		ldr	r1, [r0, #56]
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4454 00a8 5360     		str	r3, [r2, #4]
  4455              	.L294:
 3034:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 154
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 154
 
 
  4456              		.loc 1 3034 0
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4510              		.cfi_def_cfa_offset 24
  4511              		.cfi_offset 8, -24
  4512 0006 0600     		movs	r6, r0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 155
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 155
 
 
  4513 0008 0C00     		movs	r4, r1
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 3107:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  4560              		.loc 1 3107 0
  4561 004e B367     		str	r3, [r6, #120]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 156
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 156
 
 
 3110:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4613              		.cfi_def_cfa_offset 40
  4614 0004 0400     		movs	r4, r0
  4615 0006 0E00     		movs	r6, r1
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 157
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 157
 
 
  4616 0008 1700     		movs	r7, r2
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1070:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  4660              		.loc 1 1070 0 discriminator 2
  4661 0044 0233     		adds	r3, r3, #2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 158
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 158
 
 
  4662 0046 E752     		strh	r7, [r4, r3]
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4706              		.loc 1 1100 0
  4707 007a 5222     		movs	r2, #82
  4708 007c A35A     		ldrh	r3, [r4, r2]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 159
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 159
 
 
  4709 007e 013B     		subs	r3, r3, #1
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4755 00ba 4021     		movs	r1, #64
  4756 00bc 2000     		movs	r0, r4
  4757 00be FFF7FEFF 		bl	UART_WaitOnFlagUntilTimeout
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 160
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 160
 
 
  4758              	.LVL405:
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4804              	.L331:
 1105:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
  4805              		.loc 1 1105 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 161
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 161
 
 
  4806 00e8 0320     		movs	r0, #3
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4858              		.loc 1 1144 0 is_stmt 0 discriminator 1
  4859 001e 002A     		cmp	r2, #0
  4860 0020 00D1     		bne	.LCB4444
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 162
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 162
 
 
  4861 0022 91E0     		b	.L353	@long jump
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4906 0060 1CD1     		bne	.L342
 1173:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     uhMask = huart->Mask;
  4907              		.loc 1 1173 0 is_stmt 0 discriminator 5
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 163
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 163
 
 
  4908 0062 2269     		ldr	r2, [r4, #16]
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  4953              		.loc 1 1173 0 discriminator 6
  4954 009c 8022     		movs	r2, #128
  4955 009e 5205     		lsls	r2, r2, #21
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 164
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 164
 
 
  4956 00a0 9342     		cmp	r3, r2
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5001 00da 9846     		mov	r8, r3
  5002 00dc 0FE0     		b	.L347
  5003              	.L357:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 165
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 165
 
 
 1180:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****     }
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5050 011c E2D0     		beq	.L364
 1202:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****         pdata8bits++;
  5051              		.loc 1 1202 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 166
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 166
 
 
  5052 011e 2368     		ldr	r3, [r4]
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 1161:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  5099              		.loc 1 1161 0
  5100 014c 0220     		movs	r0, #2
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 167
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 167
 
 
  5101              	.LVL443:
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5152 0016 0CD4     		bmi	.L373
  5153              	.LVL448:
  5154              	.L368:
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 168
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 168
 
 
 3063:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5200 004e 064B     		ldr	r3, .L375
  5201 0050 0093     		str	r3, [sp]
  5202 0052 2B00     		movs	r3, r5
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 169
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 169
 
 
  5203 0054 0022     		movs	r2, #0
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5253 0010 2268     		ldr	r2, [r4]
  5254 0012 1368     		ldr	r3, [r2]
  5255 0014 0121     		movs	r1, #1
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 170
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 170
 
 
  5256 0016 8B43     		bics	r3, r1
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  328:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
  5302              		.loc 1 328 0
  5303 0056 FFF7FEFF 		bl	HAL_UART_MspInit
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 171
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 171
 
 
  5304              	.LVL461:
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5354              		.loc 1 399 0
  5355 000c 2423     		movs	r3, #36
  5356 000e 6367     		str	r3, [r4, #116]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 172
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 172
 
 
  402:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  429:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  5403              		.loc 1 429 0
  5404              		@ sp needed
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 173
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 173
 
 
  5405              	.LVL469:
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5456              		.cfi_offset 6, -8
  5457              		.cfi_offset 14, -4
  5458 0002 0400     		movs	r4, r0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 174
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 174
 
 
  5459 0004 0D00     		movs	r5, r1
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5504 0046 5360     		str	r3, [r2, #4]
  507:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  5505              		.loc 1 507 0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 175
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 175
 
 
  5506 0048 2268     		ldr	r2, [r4]
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5553              	.LVL483:
  5554              	.L399:
  447:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 176
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 176
 
 
  5555              		.loc 1 447 0
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  544:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   {
  5607              		.loc 1 544 0
  5608 0008 0028     		cmp	r0, #0
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 177
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 177
 
 
  5609 000a 40D0     		beq	.L411
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5654              		.loc 1 602 0
  5655 004c 2368     		ldr	r3, [r4]
  5656 004e 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 178
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 178
 
 
  5657 0050 1149     		ldr	r1, .L415+4
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5704              	.LVL500:
  5705              	.L411:
  546:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c ****   }
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 179
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 179
 
 
  5706              		.loc 1 546 0
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2552:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  5757              		.loc 1 2552 0 discriminator 2
  5758 0020 2023     		movs	r3, #32
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 180
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 180
 
 
  5759 0022 4367     		str	r3, [r0, #116]
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
 2571:Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c **** 
  5808              		.loc 1 2571 0 discriminator 2
  5809 0014 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 181
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 181
 
 
  5810 0016 1368     		ldr	r3, [r2]
@@ -10844,163 +10844,163 @@ ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 1
  5847              		.file 10 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h"
  5848              		.file 11 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h"
  5849              		.file 12 "Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h"
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 182
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 182
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l0xx_hal_uart.c
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:16     .text.UART_EndTxTransfer:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:22     .text.UART_EndTxTransfer:00000000 UART_EndTxTransfer
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:47     .text.UART_EndRxTransfer:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:53     .text.UART_EndRxTransfer:00000000 UART_EndRxTransfer
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:86     .text.UART_EndRxTransfer:00000020 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:91     .text.UART_TxISR_8BIT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:97     .text.UART_TxISR_8BIT:00000000 UART_TxISR_8BIT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:155    .text.UART_TxISR_16BIT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:161    .text.UART_TxISR_16BIT:00000000 UART_TxISR_16BIT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:223    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:230    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:245    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:252    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:267    .text.HAL_UART_DeInit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:274    .text.HAL_UART_DeInit:00000000 HAL_UART_DeInit
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:339    .text.HAL_UART_Transmit_IT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:346    .text.HAL_UART_Transmit_IT:00000000 HAL_UART_Transmit_IT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:481    .text.HAL_UART_Transmit_IT:00000088 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:487    .text.HAL_UART_Receive_IT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:494    .text.HAL_UART_Receive_IT:00000000 HAL_UART_Receive_IT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:707    .text.HAL_UART_Receive_IT:000000f4 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1930   .text.UART_RxISR_8BIT:00000000 UART_RxISR_8BIT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2028   .text.UART_RxISR_16BIT:00000000 UART_RxISR_16BIT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:714    .text.HAL_UART_Transmit_DMA:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:721    .text.HAL_UART_Transmit_DMA:00000000 HAL_UART_Transmit_DMA
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:877    .text.HAL_UART_Transmit_DMA:000000b8 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1754   .text.UART_DMATransmitCplt:00000000 UART_DMATransmitCplt
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1877   .text.UART_DMATxHalfCplt:00000000 UART_DMATxHalfCplt
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2270   .text.UART_DMAError:00000000 UART_DMAError
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:884    .text.HAL_UART_Receive_DMA:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:891    .text.HAL_UART_Receive_DMA:00000000 HAL_UART_Receive_DMA
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1051   .text.HAL_UART_Receive_DMA:000000c0 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2126   .text.UART_DMAReceiveCplt:00000000 UART_DMAReceiveCplt
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2217   .text.UART_DMARxHalfCplt:00000000 UART_DMARxHalfCplt
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1058   .text.HAL_UART_DMAPause:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1065   .text.HAL_UART_DMAPause:00000000 HAL_UART_DMAPause
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1163   .text.HAL_UART_DMAPause:00000064 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1168   .text.HAL_UART_DMAResume:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1175   .text.HAL_UART_DMAResume:00000000 HAL_UART_DMAResume
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1256   .text.HAL_UART_DMAStop:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1263   .text.HAL_UART_DMAStop:00000000 HAL_UART_DMAStop
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1391   .text.HAL_UART_Abort:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1398   .text.HAL_UART_Abort:00000000 HAL_UART_Abort
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1534   .text.HAL_UART_Abort:000000ac $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1539   .text.HAL_UART_AbortTransmit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1546   .text.HAL_UART_AbortTransmit:00000000 HAL_UART_AbortTransmit
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1622   .text.HAL_UART_AbortReceive:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1629   .text.HAL_UART_AbortReceive:00000000 HAL_UART_AbortReceive
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1721   .text.HAL_UART_AbortReceive:00000070 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1726   .text.HAL_UART_TxCpltCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1733   .text.HAL_UART_TxCpltCallback:00000000 HAL_UART_TxCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1748   .text.UART_DMATransmitCplt:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1809   .text.UART_EndTransmit_IT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1815   .text.UART_EndTransmit_IT:00000000 UART_EndTransmit_IT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1849   .text.HAL_UART_TxHalfCpltCallback:00000000 $t
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 183
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:16     .text.UART_EndTxTransfer:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:22     .text.UART_EndTxTransfer:00000000 UART_EndTxTransfer
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:47     .text.UART_EndRxTransfer:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:53     .text.UART_EndRxTransfer:00000000 UART_EndRxTransfer
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:86     .text.UART_EndRxTransfer:00000020 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:91     .text.UART_TxISR_8BIT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:97     .text.UART_TxISR_8BIT:00000000 UART_TxISR_8BIT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:155    .text.UART_TxISR_16BIT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:161    .text.UART_TxISR_16BIT:00000000 UART_TxISR_16BIT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:223    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:230    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:245    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:252    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:267    .text.HAL_UART_DeInit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:274    .text.HAL_UART_DeInit:00000000 HAL_UART_DeInit
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:339    .text.HAL_UART_Transmit_IT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:346    .text.HAL_UART_Transmit_IT:00000000 HAL_UART_Transmit_IT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:481    .text.HAL_UART_Transmit_IT:00000088 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:487    .text.HAL_UART_Receive_IT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:494    .text.HAL_UART_Receive_IT:00000000 HAL_UART_Receive_IT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:707    .text.HAL_UART_Receive_IT:000000f4 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1930   .text.UART_RxISR_8BIT:00000000 UART_RxISR_8BIT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2028   .text.UART_RxISR_16BIT:00000000 UART_RxISR_16BIT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:714    .text.HAL_UART_Transmit_DMA:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:721    .text.HAL_UART_Transmit_DMA:00000000 HAL_UART_Transmit_DMA
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:877    .text.HAL_UART_Transmit_DMA:000000b8 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1754   .text.UART_DMATransmitCplt:00000000 UART_DMATransmitCplt
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1877   .text.UART_DMATxHalfCplt:00000000 UART_DMATxHalfCplt
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2270   .text.UART_DMAError:00000000 UART_DMAError
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:884    .text.HAL_UART_Receive_DMA:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:891    .text.HAL_UART_Receive_DMA:00000000 HAL_UART_Receive_DMA
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1051   .text.HAL_UART_Receive_DMA:000000c0 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2126   .text.UART_DMAReceiveCplt:00000000 UART_DMAReceiveCplt
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2217   .text.UART_DMARxHalfCplt:00000000 UART_DMARxHalfCplt
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1058   .text.HAL_UART_DMAPause:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1065   .text.HAL_UART_DMAPause:00000000 HAL_UART_DMAPause
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1163   .text.HAL_UART_DMAPause:00000064 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1168   .text.HAL_UART_DMAResume:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1175   .text.HAL_UART_DMAResume:00000000 HAL_UART_DMAResume
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1256   .text.HAL_UART_DMAStop:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1263   .text.HAL_UART_DMAStop:00000000 HAL_UART_DMAStop
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1391   .text.HAL_UART_Abort:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1398   .text.HAL_UART_Abort:00000000 HAL_UART_Abort
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1534   .text.HAL_UART_Abort:000000ac $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1539   .text.HAL_UART_AbortTransmit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1546   .text.HAL_UART_AbortTransmit:00000000 HAL_UART_AbortTransmit
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1622   .text.HAL_UART_AbortReceive:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1629   .text.HAL_UART_AbortReceive:00000000 HAL_UART_AbortReceive
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1721   .text.HAL_UART_AbortReceive:00000070 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1726   .text.HAL_UART_TxCpltCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1733   .text.HAL_UART_TxCpltCallback:00000000 HAL_UART_TxCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1748   .text.UART_DMATransmitCplt:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1809   .text.UART_EndTransmit_IT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1815   .text.UART_EndTransmit_IT:00000000 UART_EndTransmit_IT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1849   .text.HAL_UART_TxHalfCpltCallback:00000000 $t
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 183
 
 
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1856   .text.HAL_UART_TxHalfCpltCallback:00000000 HAL_UART_TxHalfCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1871   .text.UART_DMATxHalfCplt:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1902   .text.HAL_UART_RxCpltCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1909   .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:1924   .text.UART_RxISR_8BIT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2017   .text.UART_RxISR_8BIT:00000060 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2022   .text.UART_RxISR_16BIT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2115   .text.UART_RxISR_16BIT:00000060 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2120   .text.UART_DMAReceiveCplt:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2184   .text.UART_DMAReceiveCplt:00000040 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2189   .text.HAL_UART_RxHalfCpltCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2196   .text.HAL_UART_RxHalfCpltCallback:00000000 HAL_UART_RxHalfCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2211   .text.UART_DMARxHalfCplt:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2242   .text.HAL_UART_ErrorCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2249   .text.HAL_UART_ErrorCallback:00000000 HAL_UART_ErrorCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2264   .text.UART_DMAError:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2353   .text.HAL_UART_IRQHandler:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2360   .text.HAL_UART_IRQHandler:00000000 HAL_UART_IRQHandler
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2647   .text.HAL_UART_IRQHandler:00000140 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2658   .text.UART_DMAAbortOnError:00000000 UART_DMAAbortOnError
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2652   .text.UART_DMAAbortOnError:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2690   .text.HAL_UART_AbortCpltCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2697   .text.HAL_UART_AbortCpltCallback:00000000 HAL_UART_AbortCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2712   .text.HAL_UART_Abort_IT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2719   .text.HAL_UART_Abort_IT:00000000 HAL_UART_Abort_IT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2897   .text.HAL_UART_Abort_IT:000000d8 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2982   .text.UART_DMATxAbortCallback:00000000 UART_DMATxAbortCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2910   .text.UART_DMARxAbortCallback:00000000 UART_DMARxAbortCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2904   .text.UART_DMARxAbortCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:2976   .text.UART_DMATxAbortCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3042   .text.HAL_UART_AbortTransmitCpltCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3049   .text.HAL_UART_AbortTransmitCpltCallback:00000000 HAL_UART_AbortTransmitCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3064   .text.HAL_UART_AbortTransmit_IT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3071   .text.HAL_UART_AbortTransmit_IT:00000000 HAL_UART_AbortTransmit_IT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3158   .text.HAL_UART_AbortTransmit_IT:00000060 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3169   .text.UART_DMATxOnlyAbortCallback:00000000 UART_DMATxOnlyAbortCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3163   .text.UART_DMATxOnlyAbortCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3201   .text.HAL_UART_AbortReceiveCpltCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3208   .text.HAL_UART_AbortReceiveCpltCallback:00000000 HAL_UART_AbortReceiveCpltCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3223   .text.HAL_UART_AbortReceive_IT:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3230   .text.HAL_UART_AbortReceive_IT:00000000 HAL_UART_AbortReceive_IT
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3337   .text.HAL_UART_AbortReceive_IT:00000080 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3349   .text.UART_DMARxOnlyAbortCallback:00000000 UART_DMARxOnlyAbortCallback
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3343   .text.UART_DMARxOnlyAbortCallback:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3391   .text.HAL_MultiProcessor_EnterMuteMode:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3398   .text.HAL_MultiProcessor_EnterMuteMode:00000000 HAL_MultiProcessor_EnterMuteMode
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3419   .text.HAL_HalfDuplex_EnableTransmitter:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3426   .text.HAL_HalfDuplex_EnableTransmitter:00000000 HAL_HalfDuplex_EnableTransmitter
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3485   .text.HAL_HalfDuplex_EnableReceiver:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3492   .text.HAL_HalfDuplex_EnableReceiver:00000000 HAL_HalfDuplex_EnableReceiver
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3551   .text.HAL_LIN_SendBreak:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3558   .text.HAL_LIN_SendBreak:00000000 HAL_LIN_SendBreak
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3611   .text.HAL_UART_GetState:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3618   .text.HAL_UART_GetState:00000000 HAL_UART_GetState
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3642   .text.HAL_UART_GetError:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3649   .text.HAL_UART_GetError:00000000 HAL_UART_GetError
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3669   .text.UART_SetConfig:00000000 $t
-ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s 			page 184
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1856   .text.HAL_UART_TxHalfCpltCallback:00000000 HAL_UART_TxHalfCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1871   .text.UART_DMATxHalfCplt:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1902   .text.HAL_UART_RxCpltCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1909   .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:1924   .text.UART_RxISR_8BIT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2017   .text.UART_RxISR_8BIT:00000060 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2022   .text.UART_RxISR_16BIT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2115   .text.UART_RxISR_16BIT:00000060 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2120   .text.UART_DMAReceiveCplt:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2184   .text.UART_DMAReceiveCplt:00000040 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2189   .text.HAL_UART_RxHalfCpltCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2196   .text.HAL_UART_RxHalfCpltCallback:00000000 HAL_UART_RxHalfCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2211   .text.UART_DMARxHalfCplt:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2242   .text.HAL_UART_ErrorCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2249   .text.HAL_UART_ErrorCallback:00000000 HAL_UART_ErrorCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2264   .text.UART_DMAError:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2353   .text.HAL_UART_IRQHandler:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2360   .text.HAL_UART_IRQHandler:00000000 HAL_UART_IRQHandler
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2647   .text.HAL_UART_IRQHandler:00000140 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2658   .text.UART_DMAAbortOnError:00000000 UART_DMAAbortOnError
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2652   .text.UART_DMAAbortOnError:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2690   .text.HAL_UART_AbortCpltCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2697   .text.HAL_UART_AbortCpltCallback:00000000 HAL_UART_AbortCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2712   .text.HAL_UART_Abort_IT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2719   .text.HAL_UART_Abort_IT:00000000 HAL_UART_Abort_IT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2897   .text.HAL_UART_Abort_IT:000000d8 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2982   .text.UART_DMATxAbortCallback:00000000 UART_DMATxAbortCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2910   .text.UART_DMARxAbortCallback:00000000 UART_DMARxAbortCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2904   .text.UART_DMARxAbortCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:2976   .text.UART_DMATxAbortCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3042   .text.HAL_UART_AbortTransmitCpltCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3049   .text.HAL_UART_AbortTransmitCpltCallback:00000000 HAL_UART_AbortTransmitCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3064   .text.HAL_UART_AbortTransmit_IT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3071   .text.HAL_UART_AbortTransmit_IT:00000000 HAL_UART_AbortTransmit_IT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3158   .text.HAL_UART_AbortTransmit_IT:00000060 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3169   .text.UART_DMATxOnlyAbortCallback:00000000 UART_DMATxOnlyAbortCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3163   .text.UART_DMATxOnlyAbortCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3201   .text.HAL_UART_AbortReceiveCpltCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3208   .text.HAL_UART_AbortReceiveCpltCallback:00000000 HAL_UART_AbortReceiveCpltCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3223   .text.HAL_UART_AbortReceive_IT:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3230   .text.HAL_UART_AbortReceive_IT:00000000 HAL_UART_AbortReceive_IT
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3337   .text.HAL_UART_AbortReceive_IT:00000080 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3349   .text.UART_DMARxOnlyAbortCallback:00000000 UART_DMARxOnlyAbortCallback
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3343   .text.UART_DMARxOnlyAbortCallback:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3391   .text.HAL_MultiProcessor_EnterMuteMode:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3398   .text.HAL_MultiProcessor_EnterMuteMode:00000000 HAL_MultiProcessor_EnterMuteMode
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3419   .text.HAL_HalfDuplex_EnableTransmitter:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3426   .text.HAL_HalfDuplex_EnableTransmitter:00000000 HAL_HalfDuplex_EnableTransmitter
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3485   .text.HAL_HalfDuplex_EnableReceiver:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3492   .text.HAL_HalfDuplex_EnableReceiver:00000000 HAL_HalfDuplex_EnableReceiver
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3551   .text.HAL_LIN_SendBreak:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3558   .text.HAL_LIN_SendBreak:00000000 HAL_LIN_SendBreak
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3611   .text.HAL_UART_GetState:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3618   .text.HAL_UART_GetState:00000000 HAL_UART_GetState
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3642   .text.HAL_UART_GetError:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3649   .text.HAL_UART_GetError:00000000 HAL_UART_GetError
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3669   .text.UART_SetConfig:00000000 $t
+ARM GAS  C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s 			page 184
 
 
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3676   .text.UART_SetConfig:00000000 UART_SetConfig
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:3773   .rodata.UART_SetConfig:00000000 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4312   .text.UART_SetConfig:000002f4 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4331   .text.UART_AdvFeatureConfig:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4338   .text.UART_AdvFeatureConfig:00000000 UART_AdvFeatureConfig
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4472   .text.UART_AdvFeatureConfig:000000bc $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4485   .text.UART_WaitOnFlagUntilTimeout:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4492   .text.UART_WaitOnFlagUntilTimeout:00000000 UART_WaitOnFlagUntilTimeout
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4584   .text.UART_WaitOnFlagUntilTimeout:00000064 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4589   .text.HAL_UART_Transmit:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4596   .text.HAL_UART_Transmit:00000000 HAL_UART_Transmit
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4812   .text.HAL_UART_Receive:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:4819   .text.HAL_UART_Receive:00000000 HAL_UART_Receive
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5111   .text.HAL_UART_Receive:00000154 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5116   .text.UART_CheckIdleState:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5123   .text.UART_CheckIdleState:00000000 UART_CheckIdleState
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5216   .text.UART_CheckIdleState:00000068 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5221   .text.HAL_UART_Init:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5228   .text.HAL_UART_Init:00000000 HAL_UART_Init
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5321   .text.HAL_UART_Init:00000068 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5326   .text.HAL_HalfDuplex_Init:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5333   .text.HAL_HalfDuplex_Init:00000000 HAL_HalfDuplex_Init
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5432   .text.HAL_HalfDuplex_Init:00000074 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5437   .text.HAL_LIN_Init:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5444   .text.HAL_LIN_Init:00000000 HAL_LIN_Init
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5578   .text.HAL_LIN_Init:0000009c $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5583   .text.HAL_MultiProcessor_Init:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5590   .text.HAL_MultiProcessor_Init:00000000 HAL_MultiProcessor_Init
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5713   .text.HAL_MultiProcessor_Init:00000094 $d
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5719   .text.HAL_MultiProcessor_EnableMuteMode:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5726   .text.HAL_MultiProcessor_EnableMuteMode:00000000 HAL_MultiProcessor_EnableMuteMode
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5777   .text.HAL_MultiProcessor_DisableMuteMode:00000000 $t
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5784   .text.HAL_MultiProcessor_DisableMuteMode:00000000 HAL_MultiProcessor_DisableMuteMode
-C:\Users\Nicolas\AppData\Local\Temp\ccrEYWkH.s:5833   .text.HAL_MultiProcessor_DisableMuteMode:0000002c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3676   .text.UART_SetConfig:00000000 UART_SetConfig
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:3773   .rodata.UART_SetConfig:00000000 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4312   .text.UART_SetConfig:000002f4 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4331   .text.UART_AdvFeatureConfig:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4338   .text.UART_AdvFeatureConfig:00000000 UART_AdvFeatureConfig
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4472   .text.UART_AdvFeatureConfig:000000bc $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4485   .text.UART_WaitOnFlagUntilTimeout:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4492   .text.UART_WaitOnFlagUntilTimeout:00000000 UART_WaitOnFlagUntilTimeout
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4584   .text.UART_WaitOnFlagUntilTimeout:00000064 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4589   .text.HAL_UART_Transmit:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4596   .text.HAL_UART_Transmit:00000000 HAL_UART_Transmit
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4812   .text.HAL_UART_Receive:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:4819   .text.HAL_UART_Receive:00000000 HAL_UART_Receive
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5111   .text.HAL_UART_Receive:00000154 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5116   .text.UART_CheckIdleState:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5123   .text.UART_CheckIdleState:00000000 UART_CheckIdleState
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5216   .text.UART_CheckIdleState:00000068 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5221   .text.HAL_UART_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5228   .text.HAL_UART_Init:00000000 HAL_UART_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5321   .text.HAL_UART_Init:00000068 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5326   .text.HAL_HalfDuplex_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5333   .text.HAL_HalfDuplex_Init:00000000 HAL_HalfDuplex_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5432   .text.HAL_HalfDuplex_Init:00000074 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5437   .text.HAL_LIN_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5444   .text.HAL_LIN_Init:00000000 HAL_LIN_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5578   .text.HAL_LIN_Init:0000009c $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5583   .text.HAL_MultiProcessor_Init:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5590   .text.HAL_MultiProcessor_Init:00000000 HAL_MultiProcessor_Init
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5713   .text.HAL_MultiProcessor_Init:00000094 $d
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5719   .text.HAL_MultiProcessor_EnableMuteMode:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5726   .text.HAL_MultiProcessor_EnableMuteMode:00000000 HAL_MultiProcessor_EnableMuteMode
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5777   .text.HAL_MultiProcessor_DisableMuteMode:00000000 $t
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5784   .text.HAL_MultiProcessor_DisableMuteMode:00000000 HAL_MultiProcessor_DisableMuteMode
+C:\Users\Nicolas\AppData\Local\Temp\ccllcWVY.s:5833   .text.HAL_MultiProcessor_DisableMuteMode:0000002c $d
 
 UNDEFINED SYMBOLS
 HAL_DMA_Start_IT

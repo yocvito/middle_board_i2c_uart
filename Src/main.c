@@ -188,6 +188,11 @@ int circ_bbuf_push(circ_bbuf_t *c, uint8_t data);
 int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data);
 int circ_bbuf_free_space(circ_bbuf_t *c);
 
+/*!
+ *  Fonction basique pour convertir un entier en caractère
+ */
+char itoch(int i);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -233,7 +238,8 @@ int main(void)
   BSP_LED_Off(LED3);
   
   //buffer d'envoi en i2c
-  uint8_t bf[2] = {0};
+  uint8_t txbuff[2] = {0};
+  uint8_t buff = 0;
 
 #if USE_MULTIPLE_UART == 1
   HAL_UART_Receive_IT(&hlpuart1, &rxBuff1, 1);
@@ -250,18 +256,19 @@ int main(void)
   {
     //on tente de récup un caractère du buffer circ
 #if USE_MULTIPLE_UART == 1
-    if(circ_bbuf_pop(bbuf_table[uartPort-1], &bf) != -1)
+    if(circ_bbuf_pop(bbuf_table[uartPort-1], &buff) != -1)
 #else
-    if(circ_bbuf_pop(&cbuf, &bf[1]) != -1)
+    if(circ_bbuf_pop(&cbuf, &txbuff[1]) != -1)
 #endif
     {
-      bf[0] = '0'+ uartPort;        //on convertie l'entier en caractere correspondant
+      txbuff[0] = buff;
+      txbuff[1] = itoch(uartPort);        //on convertie l'entier en caractere correspondant 
 #if USE_MULTIPLE_UART == 1
       //si un des 2 uart n'a toujours pas reçu de données en uart, on ne change pas de port
-      if(rxBuff1 == 0 || rxBuff2 == 0)
+      if(rxBuff1 != 0 && rxBuff2 != 0)
       {
         //changement du port uart 
-        if(bf == '\r' || bf == '\n')
+        if(txbuff[0] == '\r' || txbuff[0] == '\n')
         {
           if(uartPort == MAX_UART_PORT)
           {
@@ -276,7 +283,7 @@ int main(void)
 #endif    
 
       //envoi du caractère + le port uart par i2c 
-      if (HAL_I2C_Slave_Transmit(&hi2c1, bf, 2, 0xFF) != HAL_OK)
+      if (HAL_I2C_Slave_Transmit(&hi2c1, txbuff, 2, 0xFF) != HAL_OK)
       {
         BSP_LED_On(LED3);
       }
@@ -550,7 +557,7 @@ int circ_bbuf_free_space(circ_bbuf_t *c)
 
 /*!
  * @brief   Callback de la fonction d'interuption HAL_UART_Receive_IT(...)
- * @param   huart       pointeur vers une la structure de l'uart
+ * @param   huart       pointeur vers une structure de l'uart
  * @retval  none
  */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
@@ -558,12 +565,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 #if USE_MULTIPLE_UART == 1
   if(huart == &huart2)
   {
-    circ_bbuf_push(&cbuf2, &rxBuff2);
+    circ_bbuf_push(&cbuf2, rxBuff2);
     HAL_UART_Receive_IT(huart, &rxBuff2, 1);
   }
   else if(huart == &hlpuart1)
   {
-    circ_bbuf_push(&cbuf1, &rxBuff1);
+    circ_bbuf_push(&cbuf1, rxBuff1);
     HAL_UART_Receive_IT(huart, &rxBuff1, 1);
   }
        
@@ -571,6 +578,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   circ_bbuf_push(&cbuf, rxBuff);
   HAL_UART_Receive_IT(&huart2, &rxBuff, 1);
 #endif
+}
+
+char itoch(int i)
+{
+  return (i + '0') ;
 }
 
 /* USER CODE END 4 */
