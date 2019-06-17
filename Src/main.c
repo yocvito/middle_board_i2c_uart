@@ -87,7 +87,7 @@ typedef struct circ_bbuf_t
  *  Taille des|du buffer(s) circulaire(s)
  */
 #if USE_MULTIPLE_UART == 1
-#define CIRC_BUFFER_MAX_SIZE    512     // (1024 / MAX_UART_PORT)
+#define CIRC_BUFFER_MAX_SIZE    550
 #else
 #define CIRC_BUFFER_MAX_SIZE    1024
 #endif
@@ -169,7 +169,7 @@ circ_bbuf_t *bbuf_table[MAX_UART_PORT] = {
  *              avec envoi du port uart en plus du caractère pour
  *              de meilleurs logs
  */
-uint8_t uartPort = 2;
+uint8_t uartPort = 1;
 
 /* USER CODE END PV */
 
@@ -189,7 +189,7 @@ int circ_bbuf_pop(circ_bbuf_t *c, uint8_t *data);
 int circ_bbuf_free_space(circ_bbuf_t *c);
 
 /*!
- *  Fonction basique pour convertir un entier en caractère
+ *  Fonction basique pour convertir un entier compris entre 0 et 9 en caractère
  */
 char itoch(int i);
 
@@ -263,6 +263,16 @@ int main(void)
     {
       txbuff[0] = buff;
       txbuff[1] = itoch(uartPort);        //on convertie l'entier en caractere correspondant 
+ 
+
+      //envoi du caractère + le port uart par i2c 
+      if (HAL_I2C_Slave_Transmit(&hi2c1, txbuff, 2, 0xFF) != HAL_OK)
+      {
+        BSP_LED_On(LED3);
+      }
+
+    }
+
 #if USE_MULTIPLE_UART == 1
       //si un des 2 uart n'a toujours pas reçu de données en uart, on ne change pas de port
       if(rxBuff1 != 0 && rxBuff2 != 0)
@@ -280,15 +290,7 @@ int main(void)
           }
         }
       }
-#endif    
-
-      //envoi du caractère + le port uart par i2c 
-      if (HAL_I2C_Slave_Transmit(&hi2c1, txbuff, 2, 0xFF) != HAL_OK)
-      {
-        BSP_LED_On(LED3);
-      }
-
-    }
+#endif  
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -359,6 +361,9 @@ static void MX_I2C1_Init(void)
   /* USER CODE END I2C1_Init 0 */
 
   /* USER CODE BEGIN I2C1_Init 1 */
+
+  //l'adresse est shift de 1 bit vers la gauche pour suivre le formalisme imposé par ST
+  //hi2c1.Init.OwnAddress1 = (I2C_ADDRESS << 1);
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
